@@ -20,7 +20,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
   <header class="header">
-
     <section class="header-contact container space flex">
       <div class="header-left flex">
         <p class="header-left-numbers icon flex">+1 5589 55488 55</p>
@@ -40,29 +39,56 @@
           <a href="index.html">Restaurantly</a>
         </div>
   
-        <ul class="header-nav-links flex">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#specials">Specials</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#drop-down">
-            <span>Drop Down</span>
-            <span class="drop-down">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </span>
-          </a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="header-btn"><a class="btn transparent-btn" href="index.html">Book a Table</a></li>
-        </ul>
-      </div>
+        <div class="header-nav-side jsHeaderNavSide">
+          <ul class="header-nav-links flex jsHeaderNavLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#chefs">Chefs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="header-btn"><a class="btn transparent-btn" href="index.html">Book a Table</a></li>
+          </ul>
+        </div><!--header-nav-side-->
+
+        <div class="mobile-menu jsMobileMenu">
+          <button>
+            <span class="mobile-icon"></span>
+          </button>
+        </div>
+      </div><!--header-nav-area-->
     </section><!--header-navigation-->
 
-  </header>
+    <section class="close-mobile jsCloseMobile">
+      <button>
+        <span class="close-mobile-icon"></span>
+      </button>
+    </section>
+
+    <section class="header-text container space flex">
+      <div class="header-text-content flex">
+        <div class="header-left-action">
+          <h1>Welcome to <span>Restaurantly</span></h1>
+          <p>Delivering great food for more than 18 years!</p>
+
+          <div class="header-left-btns">
+            <a class="btn transparent-btn" href="">Our Menu</a>
+            <a class="btn transparent-btn" href="">Book a Table</a>
+          </div>
+        </div>
+
+        <div class="header-right-play flex">
+          <a href="index.html" class="play-button flex">
+            <span class="play-icon"></span>
+          </a>
+        </div>
+
+      </div>
+    </section><!--header-text-->
+  </header><!--header-->
+
   <script type="module" src="assets/js/script.js"></script>
 </body>
 </html>
