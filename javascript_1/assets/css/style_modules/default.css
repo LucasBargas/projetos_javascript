@@ -206,6 +206,7 @@ body {
 .mobile-menu button {
   background: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .mobile-icon {
@@ -225,6 +226,7 @@ body {
   padding: 7px 11px;
   background: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 .close-mobile-icon {
