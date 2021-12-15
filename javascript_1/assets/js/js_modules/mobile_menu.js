@@ -3,7 +3,7 @@ export default class MobileMenu {
     this.menuButton = document.querySelector('.jsMobileMenu');
     this.buttonClose = document.querySelector('.jsCloseMobile');
     this.menuArea = document.querySelector('.jsHeaderNavSide');
-    this.navLinks = document.querySelectorAll('.jsHeaderNavLinks a');
+    this.navLinks = document.querySelectorAll('.jsHeaderNavLinks a:not(:last-of-type)');
     this.showMenu = 'show';
     this.events = ['click', 'touchstart'];
 
