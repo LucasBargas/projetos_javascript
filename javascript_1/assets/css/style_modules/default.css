@@ -268,12 +268,13 @@ body {
 
 .header-left-action h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 3rem;;
+  font-size: 3rem;
 }
 
 .header-left-action p {
   font-family: 'Playfair Display', serif;
   font-size: 1.375rem;
+  margin-top: 10px;
 }
 
 .header-left-btns {
