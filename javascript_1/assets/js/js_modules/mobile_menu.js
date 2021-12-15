@@ -1,9 +1,9 @@
 export default class MobileMenu {
   constructor() {
-    this.menuButton = document.querySelector('.jsMobileMenu');
+    this.menuButton = document.querySelector('.jsMenuMobile');
     this.buttonClose = document.querySelector('.jsCloseMobile');
-    this.menuArea = document.querySelector('.jsHeaderNavSide');
-    this.navLinks = document.querySelectorAll('.jsHeaderNavLinks a[href^="#"]');
+    this.menuArea = document.querySelector('.jsHeaderNavMenu');
+    this.navLinks = document.querySelectorAll('.jsHeaderNavMenu a');
     this.showMenu = 'show';
     this.events = ['click', 'touchstart'];
 

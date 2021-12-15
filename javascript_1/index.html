@@ -20,73 +20,80 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
   <header class="header">
-    <section class="header-contact container space flex">
-      <div class="header-left flex">
-        <p class="header-left-numbers icon flex">+1 5589 55488 55</p>
-        <p class="header-left-dates icon flex">Mon-Sat: 11AM - 23PM</p>
-      </div>
-
-      <div class="header-right flex">
-        <p class="en-lg">En</p>
-        <span>/</span>
-        <p class="de-lg">De</p>
-      </div>
-    </section><!--header-contact-->
-
-    <section class="header-nav">
-      <div class="header-nav-area container space flex">
-        <div class="header-nav-brand">
-          <a href="index.html">Restaurantly</a>
+    <section class="headerNav">
+      <div class="headerNav-dates flex container space">
+        <div class="headerNav-dates-info flex">
+          <p class="number iconHeader flex">+1 5589 55488 55</p>
+          <p class="hours iconHeader flex">Mon-Sat: 11AM - 23PM</p>
         </div>
-  
-        <div class="header-nav-side jsHeaderNavSide">
-          <ul class="header-nav-links flex jsHeaderNavLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#specials">Specials</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#chefs">Chefs</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="header-btn"><a class="btn transparent-btn" href="index.html">Book a Table</a></li>
-          </ul>
-        </div><!--header-nav-side-->
 
-        <div class="mobile-menu jsMobileMenu">
-          <button>
-            <span class="mobile-icon"></span>
+        <div class="headerNav-dates-lang">
+          <ul class="flex">
+            <li class="en">En</li>
+            <li class="de"><a href="#">De</a></li>
+          </ul>
+        </div>
+
+        <div class="closeMobile jsCloseMobile">
+          <button flex>
+            <span class="mobileIcon closeIcon"></span>
           </button>
         </div>
-      </div><!--header-nav-area-->
-    </section><!--header-navigation-->
+      </div><!--headerNav-dates-->
 
-    <section class="close-mobile jsCloseMobile">
-      <button>
-        <span class="close-mobile-icon"></span>
-      </button>
-    </section>
+      <div class="headerNav-links">
+        <div class="headerNav-links-area flex container space">
+          <div class="headerNav-brand">
+            <a href="index.html">Restaurantly</a>
+          </div>
 
-    <section class="header-text container space flex">
-      <div class="header-text-content flex">
-        <div class="header-left-action">
+          <div class="headerNav-menu jsHeaderNavMenu">
+            <ul class="flex">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#specials">Specials</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a href="#chefs">Chefs</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="headerNav-button">
+            <a class="btn transparent-btn" href="index.html">Book a Table</a>
+          </div>
+
+          <div class="menuMobile jsMenuMobile">
+            <button>
+              <span class="mobileIcon menuIcon"></span>
+            </button>
+          </div>
+        </div>
+      </div><!--headerNav-links-->
+    </section><!--headerNav-->
+
+    <section class="headerText container space flex">
+      <div class="headerText-area flex">
+        <div class="headerText-buttons">
           <h1>Welcome to <span>Restaurantly</span></h1>
           <p>Delivering great food for more than 18 years!</p>
 
-          <div class="header-left-btns">
-            <a class="btn transparent-btn" href="">Our Menu</a>
-            <a class="btn transparent-btn" href="">Book a Table</a>
+          <div class="headerText-actions">
+            <ul class="flex">
+              <li><a class="btn transparent-btn" href="index.html">Our Menu</a></li>
+              <li><a class="btn transparent-btn" href="index.html">Book a Table</a></li>
+            </ul>
           </div>
         </div>
 
-        <div class="header-right-play flex">
-          <a href="index.html" class="play-button flex">
-            <span class="play-icon"></span>
+        <div class="headerText-play flex">
+          <a href="index.html" class="playButton flex">
+            <span class="playIcon"></span>
           </a>
         </div>
-
-      </div>
-    </section><!--header-text-->
+      </div><!--headerText-area -->
+    </section><!--headerText-->
   </header><!--header-->
 
   <script type="module" src="assets/js/script.js"></script>
