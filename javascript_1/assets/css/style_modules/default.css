@@ -242,10 +242,25 @@ body {
   position: relative;
   z-index: 3;
   height: calc(100% + 112px);
+  animation: headerAnimation 1.5s forwards;
+}
+
+@keyframes headerAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .header-text-content {
   width: 100%;
+}
+
+.header-text-content h1 {
   line-height: 2.5rem;
 }
 
@@ -273,6 +288,10 @@ body {
 
 .header-left-action {
   width: 70%;
+}
+
+.header-left-action span {
+  color: var(--golden-color);
 }
 
 .header-right-play {

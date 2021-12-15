@@ -34,11 +34,6 @@
     align-items: center;
   }
 
-  .header-nav-side.show {
-    display: flex;
-    animation: showMenu .4s forwards;
-  }
-
   .header-nav-links {
     display: block;
     background: var(--white-color);
@@ -79,6 +74,14 @@
 }
 
 @media (max-width: 500px) {
+  .header-left.flex {
+    gap: 20px;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+
   .header-nav-links {
     margin-top: 35px;
     height: calc(97vh - 35px);
@@ -92,9 +95,75 @@
     height: 34px;
     width: 34px;
   }
+
+  .header-text-content {
+    display: block;
+  }
+
+  .header-text-content h1 {
+    line-height: 2.5rem;
+    font-size: 1.75rem;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .header-left-action {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header-left-btns {
+    padding-top: 40px;
+  }
+
+  .header-left-btns a {
+    font-size: 0.8125rem;
+  }
+
+  .header-right-play {
+    padding-top: 40px;
+    width: 100%;
+  }
+
+  .play-button {
+    height: 70px;
+    width: 70px;
+  }
 }
 
+@media (max-width: 440px) {
+  .header-contact {
+    justify-content: center;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .header-left-action p {
+    margin-top: 10px;
+  }
+}
+
+
 @media (max-width: 340px) {
+  .header-contact {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .header-nav {
+    position: fixed;
+    top: 61.5px;
+    width: 100%;
+    background: rgba(12, 11, 9, 0.6);
+    z-index: 5;
+  }
+
+  .header-left {
+    display: block;
+  }
+
   .close-mobile button {
     padding: 7px 5px;
   }
@@ -103,4 +172,43 @@
     height: 30px;
     width: 30px;
   }
+
+  .header-text {
+    height: calc(100% + 129.5px);
+  }
+
+  .header-left-action p {
+    font-size: 1.125rem;
+  }
+
+  .header-left-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-left-btns a{
+    display: block;
+  }
+
+  .header-left-btns a:first-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 300px) {
+  .header-nav-brand a {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    display: block;
+  }
+
+  .header-text {
+    height: calc(100% + 124px);
+  }
+
+  .header-left-btns {
+    padding-top: 30px;
+}
 }
