@@ -15,7 +15,7 @@ export default class SmoothScroll {
   }
 
   smooth(getTop) {
-    window.scrollTo({ top: getTop, behavior: 'smooth' });
+    window.scrollTo({ top: getTop - 100, behavior: 'smooth' });
   }
 
   addEventsOnLinks() {
