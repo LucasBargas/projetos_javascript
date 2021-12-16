@@ -114,6 +114,15 @@
   .headerText-play {
     padding-top: 30px;
   }
+
+  .aboutArea {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .aboutArea-text, .aboutArea-img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -141,6 +150,10 @@
 }
 
 @media screen and (max-width: 350px) {
+  .headerNav-brand a {
+    font-size: 1.15rem;
+  }
+
   .headerNav-dates-info {
     flex-direction: column;
     gap: 5px;
@@ -153,11 +166,9 @@
   .headerNav-brand a {
     font-size: 1.5rem;
   }
-}
 
-@media screen and (max-width: 350px) {
-  .headerNav-brand a {
-    font-size: 1.15rem;
+  .aboutArea-text h2 {
+    font-size: 1.5rem;
   }
 }
 

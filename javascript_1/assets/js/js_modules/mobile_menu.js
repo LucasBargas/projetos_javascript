@@ -25,11 +25,10 @@ export default class MobileMenu {
       this.buttonClose.addEventListener(userEvent, this.handleUserEvent);
     })
 
-    this.events.forEach(userEvent => {
-      this.navLinks.forEach(link => {
-        link.addEventListener(userEvent, this.handleUserEvent);
-      })
+    this.navLinks.forEach(link => {
+      link.addEventListener('click', this.handleUserEvent);
     })
+
   }
 
   init() {
