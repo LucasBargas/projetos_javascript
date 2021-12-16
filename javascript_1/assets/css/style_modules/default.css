@@ -33,7 +33,7 @@ body {
 }
 
 .space {
-  padding: 60px 3%;
+  padding: 60px 4%;
 }
 
 .btn {
@@ -89,7 +89,7 @@ body {
 }
 
 .headerNav-dates.space {
-  padding: 9px 3%;
+  padding: 9px 4%;
 }
 
 .headerNav-dates {
@@ -173,7 +173,7 @@ body {
 }
 
 .headerNav-links-area.space {
-  padding: 15px 3%;
+  padding: 15px 4%;
 }
 
 .headerNav-links-area {
@@ -233,7 +233,7 @@ body {
 }
 
 .headerText.space {
-  padding: 0 3%;
+  padding: 0 4%;
 }
 
 .headerText-area {
@@ -332,7 +332,7 @@ body {
 }
 
 .aboutArea.space {
-  padding: 80px 3%;
+  padding: 80px 4%;
 }
 
 .aboutArea-text, .aboutArea-img {
