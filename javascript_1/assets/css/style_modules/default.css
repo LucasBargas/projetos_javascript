@@ -478,7 +478,8 @@ body {
 }
 
 .whyUsSections-list p {
-  font-size: 0.9375rem;;
+  font-size: 0.9375rem;
+  max-width: 295px;
 }
 
 .whyUsSections-list li:hover {
