@@ -1,24 +1,30 @@
 @media screen and (max-width: 1536px) {
   .container {
-    max-width: 1400px;
+    max-width: 1500px;
   }
 }
 
 @media screen and (max-width: 1440px) {
   .container {
-    max-width: 1300px;
+    max-width: 1400px;
   }
 }
 
 @media screen and (max-width: 1366px) {
   .container {
-    max-width: 1300px;
+    max-width: 1320px;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .container {
-    max-width: 1180px;
+    max-width: 1260px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .menuSection-options ul {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -123,6 +129,10 @@
   .aboutArea-text, .aboutArea-img {
     width: 100%;
   }
+
+  .whyUsSections-list ul {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -132,6 +142,28 @@
   }
 
   .headerNav-dates-lang {
+    display: none;
+  }
+
+  .menuSection-options ul {
+    gap: 45px;
+  }
+
+  .allOptions-plate-info {
+    margin-left: 0;
+  }
+
+  .allOptions-plate-info span:last-of-type {
+    margin: 10px 0;
+  }
+
+  .menuSection-options .flex {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .allOptions-plate-info div .between {
     display: none;
   }
 }
@@ -170,6 +202,20 @@
   .aboutArea-text h2 {
     font-size: 1.5rem;
   }
+
+  .default-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .whyUsSections-list h4 {
+    font-size: 1.25rem;
+  }
+
+  .menuSection-nav ul {
+    display: block;
+    text-align: center;
+    gap: 5px;
+  }
 }
 
 @media screen and (max-width: 300px) {
@@ -181,5 +227,9 @@
     justify-content: center;
     flex-direction: column;
     padding-top: 25px;
+  }
+
+  .whyUsSections-list li {
+    padding: 40px 20px;
   }
 }
