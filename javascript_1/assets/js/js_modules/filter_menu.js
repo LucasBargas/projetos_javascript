@@ -1,4 +1,4 @@
-export default class filterMenu {
+export default class FilterMenu {
   constructor() {
     this.menuNavFilter = document.querySelectorAll('.jsMenuSection-nav li');
     this.menuContent = document.querySelectorAll('.jsMenuSection-options ul');

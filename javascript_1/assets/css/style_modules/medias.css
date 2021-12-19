@@ -133,6 +133,26 @@
   .whyUsSections-list ul {
     grid-template-columns: 1fr;
   }
+
+  .specialsSection-tabNav {
+    grid-template-columns: 100%;
+  }
+
+  .tabNav {
+    border: 0;
+  }
+
+  .specialContent-area {
+    padding-left: 0;
+  }
+
+  .specialContent-area.activeTab {
+    flex-direction: column-reverse;
+  }
+
+  .specialContent-area figure {
+    padding-top: 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -231,5 +251,9 @@
 
   .whyUsSections-list li {
     padding: 40px 20px;
+  }
+
+  .specialContent-area h3 {
+    font-size: 1.25rem;
   }
 }

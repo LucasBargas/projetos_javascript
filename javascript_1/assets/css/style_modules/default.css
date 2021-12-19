@@ -54,7 +54,7 @@ body {
   color: var(--white-color);
 }
 
-.default-title {
+.default-title h2 {
   text-transform: uppercase;
 }
 
@@ -613,4 +613,77 @@ body {
   width: 65%;
   height: 1px;
   background: var(--gray-color);
+}
+
+.specialsSection-tabNav {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding-top: 40px;
+}
+
+.tabNav {
+  border-right: 2px solid var(--golden-color);
+}
+
+.tabNav li {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 14px 15px;
+  transition: .5s;
+}
+
+.tabNav li:hover {
+  color: var(--golden-color);
+}
+
+.tabNav li.activeTab {
+  background: var(--golden-color);
+  color: var(--dark-bg);
+}
+
+.tabNav li.activeTab:hover {
+  color: var(--dark-bg);
+}
+
+.specialContent-area {
+  gap: 10px;
+  padding-left: 24px;
+  display: none;
+}
+
+.specialContent-area.activeTab {
+  display: flex;
+  animation: showTabContent .5s forwards;
+}
+
+@keyframes showTabContent {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.specialContent-area h3 {
+  font-family: 'PLayfair Display', serif;
+  font-size: 1.625rem;
+}
+
+.specialContent-area p:first-of-type {
+  color: #aaaaaa;
+  font-style: italic;
+  margin: 16px 0;
+}
+
+.specialContent-area p:last-of-type {
+  color: #aaaaaa;
+}
+
+.specialContent-area img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
