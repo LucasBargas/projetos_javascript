@@ -2,6 +2,7 @@ import MobileMenu from "./js_modules/mobile_menu.js";
 import SmoothScroll from "./js_modules/smooth_scroll.js";
 import FilterMenu from "./js_modules/filter_menu.js";
 import TabNav from "./js_modules/tab_nav.js";
+import Slide from "./js_modules/slide.js";
 
 const mobileMenu = new MobileMenu();
 mobileMenu.init();
@@ -14,3 +15,6 @@ filterMenu.init();
 
 const tabNav = new TabNav();
 tabNav.init();
+
+const slide = new Slide();
+slide.init();
