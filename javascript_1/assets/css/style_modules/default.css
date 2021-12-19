@@ -522,7 +522,7 @@ body {
   transition: .5s;
 }
 
-.menuSection-nahoverv ul li: {
+.menuSection-nahoverv ul li {
   color: var(--golden-color);
 }
 
