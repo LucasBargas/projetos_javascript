@@ -1,7 +1,7 @@
 import MobileMenu from "./js_modules/mobile_menu.js";
 import SmoothScroll from "./js_modules/smooth_scroll.js";
 import FilterMenu from "./js_modules/filter_menu.js";
-import TabNav from "./js_modules/tabNav.js";
+import TabNav from "./js_modules/tab_nav.js";
 
 const mobileMenu = new MobileMenu();
 mobileMenu.init();
