@@ -26,6 +26,10 @@
   .menuSection-options ul {
     grid-template-columns: 1fr;
   }
+
+  .menuSection-nav ul li:hover, .allOptions-plate-info a:hover, .tabNav li:hover {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
