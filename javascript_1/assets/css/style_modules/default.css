@@ -41,11 +41,11 @@ body {
   padding: 8px 25px;
   text-transform: uppercase;
   font-size: 0.8125rem;
+  border-radius: 50px;
 }
 
 .transparent-btn {
   border: 2px solid var(--golden-color);
-  border-radius: 50px;
   transition: .4s;
 }
 
@@ -782,4 +782,78 @@ body {
 .eventsSection-slide-contentLeft,
 .eventsSection-slide-contentRight {
   width: 50%;
+}
+
+.reservationSection-form {
+  padding-top: 40px;
+}
+
+.reservationSection-form .form .form-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reservationSection-form input,
+.reservationSection-form textarea {
+  display: block;
+  border: 1px solid var(--golden-color);
+  background: var(--dark-bg);
+  outline: 0;
+  font-size: 1rem;
+  padding: 12px 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--white-color);
+}
+
+.reservationSection-form input::placeholder,
+.reservationSection-form textarea::placeholder {
+  color: var(--white-color);
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.reservationSection-form form textarea {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  height: 127px;
+  resize: none;
+}
+
+.sendForm {
+  padding-top: 20px;
+}
+
+.reservationSection-form .sendForm {
+  display: flex;
+  justify-content: center;
+}
+
+.reservationSection-form .sendForm .btn {
+  display: block;
+  background: var(--golden-color);
+  color: var(--white-color);
+  padding: 10px 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 60px;
+  border: 0;
+}
+
+.form-message {
+  padding-top: 20px;
+}
+
+.form-message p {
+  background: tomato;
+  padding: 10px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  font-size: 0.875rem;
+  animation: showAlert 2s forwards;
+}
+
+@keyframes showAlert {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
