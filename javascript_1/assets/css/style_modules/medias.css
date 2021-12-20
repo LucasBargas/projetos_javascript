@@ -201,6 +201,14 @@
   .allOptions-plate-info div .between {
     display: none;
   }
+
+  .formMessage-area {
+    align-items: flex-start;
+  }
+
+  .formMessage-area p {
+    max-width: 250px;
+  }
 }
 
 @media screen and (max-width: 400px) {

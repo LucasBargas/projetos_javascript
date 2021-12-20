@@ -1,26 +1,29 @@
 export default class FormMessage {
   constructor() {
-    this.formMessage = document.querySelector('.jsFormMessage');
+    this.formMessage = document.querySelector('.formMessage');
     this.sendForm = document.querySelector('.jsSendForm button');
+    this.closeMessage = document.querySelector('.closeMessage .close');
 
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClickBtn = this.handleClickBtn.bind(this);
+    this.handleClickClose = this.handleClickClose.bind(this);
   }
 
-  message() {
-    const createDiv = document.createElement('div');
-    const messageAlert = '<p>Este formulário não pode executar o envio, pois o mesmo é apenas demonstrativo.</p>';
-    createDiv.innerHTML = messageAlert;
-    this.formMessage.appendChild(createDiv);
+  showMessage() {
+    this.formMessage.style.display = 'block';
   }
 
-  handleClick(e) {
+  handleClickBtn(e) {
     e.preventDefault();
-    if (this.formMessage.innerHTML === '') this.message();
-    else return;
+    this.showMessage();
+  }
+
+  handleClickClose() {
+    this.formMessage.style.display = 'none';
   }
 
   init() {
-    this.sendForm.addEventListener('click', this.handleClick);
+    this.sendForm.addEventListener('click', this.handleClickBtn);
+    this.closeMessage.addEventListener('click', this.handleClickClose);
     return this;
   }
 }

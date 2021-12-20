@@ -846,16 +846,34 @@ body {
   background: #e7b154;
 }
 
-.form-message {
-  padding-top: 20px;
+.formMessage {
+  margin-top: 20px;
+  display: none;
+  animation: showAlert 1s forwards;
 }
 
-.form-message p {
+.formMessage-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
   background: tomato;
   padding: 10px;
+}
+
+.formMessage-area p {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
   font-size: 0.875rem;
-  animation: showAlert 1s forwards;
+}
+
+.close {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url('../../images/icons/close.svg');
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 @keyframes showAlert {
