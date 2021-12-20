@@ -207,7 +207,7 @@
   }
 
   .formMessage-area p {
-    max-width: 250px;
+    max-width: 300px;
   }
 }
 
@@ -221,6 +221,10 @@
   .headerText-buttons p {
     max-width: 320px;
     margin: 0 auto;
+  }
+
+  .formMessage-area p {
+    max-width: 280px;
   }
 }
 
@@ -281,6 +285,10 @@
 
   .form-message p {
     font-size: 0.75rem;
+  }
+
+  .formMessage-area p {
+    max-width: 220px;
   }
 }
 
