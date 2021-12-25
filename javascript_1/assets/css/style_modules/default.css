@@ -1317,3 +1317,8 @@ body {
 .return:hover svg {
   color: var(--white-color);
 }
+
+.sendForm .btn, .finalContent-single:last-of-type form .btn {
+  text-transform: unset;
+  font-size: 1rem;
+}
