@@ -1,10 +1,12 @@
 export default class ReturnScroll {
   constructor() {
     this.returnButton = document.querySelector('.jsReturn');
+    this.events = ['click', 'touchstart'];
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  handleClick(e) {
+    e.preventDefault();
     this.return();
   }
 
@@ -13,7 +15,9 @@ export default class ReturnScroll {
   }
 
   addEventOnButton() {
-    this.returnButton.addEventListener('click', this.handleClick);
+    this.events.forEach(userEvent => {
+      this.returnButton.addEventListener(userEvent , this.handleClick);
+    })
   }
 
   init() {
