@@ -1130,3 +1130,190 @@ body {
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
 }
+
+.finalContent-area {
+  border-top: 2px solid #28251e;
+  border-bottom: 2px solid #28251e;
+}
+
+.finalContent-navs {
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+}
+
+.finalContent-navs h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.finalContent-navs h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+.finalContent-navs {
+  font-size: 0.875rem;
+}
+
+.finalContent-single:first-of-type ul {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.finalContent-single:first-of-type ul:first-of-type {
+  padding: 25px 0;
+}
+
+.finalContent-single:first-of-type ul span {
+  font-weight: 700;
+}
+
+.finalContent-single:first-of-type ul:nth-of-type(2) li {
+  gap: 5px;
+}
+
+.finalContent-single:first-of-type ul:last-of-type {
+  padding-top: 15px;
+  gap: 10px;
+}
+
+.finalContent-single:first-of-type ul:last-of-type a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: #26231d;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.finalContent-single:first-of-type ul:last-of-type a:hover {
+  background: var(--golden-color);
+}
+
+.finalContent-single:first-of-type ul:last-of-type a span {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 18px;
+  height: 18px;
+}
+
+.finalContent-single:not(:first-of-type) a {
+  color: var(--white-color);
+  transition: .5s;
+}
+
+.finalContent-single:not(:first-of-type) a:hover {
+  color: var(--golden-color);
+}
+
+.finalContent-single:not(:first-of-type) ul {
+  padding-top: 25px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.finalContent-single:not(:first-of-type) ul li::before {
+  content: '';
+  display: inline-block;
+  background-image: url('../../images/icons/chevron-right.svg');
+  background-position: center;
+  background-size: 100% 100%;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.finalContent-single:last-of-type ul li::before {
+  display: none;
+}
+
+.finalContent-single:last-of-type form {
+  padding-top: 25px;
+  display: flex;
+  position: relative;
+}
+
+.finalContent-single:last-of-type form input {
+  width: 100%;
+  height: 43px;
+  background: #26231d;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  padding: 0 125px 0 15px;
+  color: var(--white-color);
+  font-size: 1rem;
+}
+
+.finalContent-single:last-of-type form button {
+  height: 43px;
+  border-radius: 30px;
+  border: 0;
+  padding: 0 20px 2px 20px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  background: var(--golden-color);
+  color: var(--white-color);
+}
+
+.finalContent-copy {
+  background: #000000;
+}
+
+.finalContent-copy-area.space {
+  padding: 30px 4%;
+  text-align: center;
+}
+
+.finalContent-copy-area {
+  font-size: 0.875rem;
+}
+
+.finalContent-copy-area span {
+  font-weight: 700;
+}
+
+.finalContent-copy-area a {
+  color: var(--golden-color);
+}
+
+.finalContent-copy-area p:last-of-type {
+  margin-top: 10px;
+}
+
+.return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--golden-color);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: .5s;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 2000;
+}
+
+.return:hover {
+  background: var(--golden-color);
+}
+
+.return svg {
+  color: var(--golden-color);
+  width: 28px;
+  height: 28px;
+  transition: .5s;
+}
+
+.return:hover svg {
+  color: var(--white-color);
+}

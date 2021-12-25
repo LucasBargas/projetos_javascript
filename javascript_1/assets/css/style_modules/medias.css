@@ -218,6 +218,11 @@
   .contact-topics .form-area{
     width: 100%;
   }
+
+  .finalContent-navs {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -282,6 +287,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  .finalContent-navs {
+    grid-template-columns: 1fr;
+    gap: 40px 0;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -296,8 +306,27 @@
     margin: 0 auto;
   }
 
+  .default-title h1 {
+    font-size: 1.5rem;
+  }
+
   .formMessage-area p {
     max-width: 280px;
+  }
+
+  .finalContent-single:last-of-type form input {
+    padding: 0 15px;
+  }
+
+  .finalContent-single:last-of-type form {
+    display: block;
+    position: static;
+  }
+
+  .finalContent-single:last-of-type form button {
+    margin-top: 15px;
+    position: static;
+    width: 100%;
   }
 }
 
@@ -320,10 +349,6 @@
   }
 
   .aboutArea-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .default-title h1 {
     font-size: 1.5rem;
   }
 
@@ -368,6 +393,18 @@
   .aboutArea-img figure::after {
     width: 30px;
     height: 30px;
+  }
+
+  .return {
+    width: 35px;
+    height: 35px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .return svg {
+    width: 22px;
+    height: 22px;
   }
 }
 

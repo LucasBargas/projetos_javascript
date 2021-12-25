@@ -22,13 +22,8 @@ export default class FormMessage {
   }
 
   addEventOnButtons() {
-    this.sendForm.forEach(send => {
-      send.addEventListener('click', this.handleClickBtn);
-    })
-
-    this.closeMessage.forEach(close => {
-      close.addEventListener('click', this.handleClickClose);
-    })
+    this.sendForm.forEach(send => send.addEventListener('click', this.handleClickBtn));
+    this.closeMessage.forEach(close =>  close.addEventListener('click', this.handleClickClose));
   }
 
   init() {
