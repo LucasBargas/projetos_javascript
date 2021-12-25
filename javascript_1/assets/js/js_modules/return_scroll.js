@@ -1,13 +1,16 @@
+import debounce from "./debounce.js";
+
 export default class ReturnScroll {
   constructor() {
     this.returnButton = document.querySelector('.jsReturn');
     this.events = ['click', 'touchstart'];
     this.handleClick = this.handleClick.bind(this);
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleScroll = debounce(this.handleScroll.bind(this), 50);
   }
 
   handleScroll() {
-    if (window.pageYOffset > 500) this.returnButton.classList.add('show');
+    console.log('scroll')
+    if (window.pageYOffset > 300) this.returnButton.classList.add('show');
     else if (window.pageYOffset < 500) this.returnButton.classList.remove('show');
   }
 
