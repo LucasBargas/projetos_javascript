@@ -1,29 +1,38 @@
 export default class FormMessage {
   constructor() {
-    this.formMessage = document.querySelector('.formMessage');
-    this.sendForm = document.querySelector('.jsSendForm button');
-    this.closeMessage = document.querySelector('.closeMessage .close');
+    this.formMessage = document.querySelectorAll('.jsFormMessage');
+    this.sendForm = document.querySelectorAll('.jsSendForm button');
+    this.closeMessage = document.querySelectorAll('.closeMessage .close');
 
     this.handleClickBtn = this.handleClickBtn.bind(this);
     this.handleClickClose = this.handleClickClose.bind(this);
   }
 
-  showMessage() {
-    this.formMessage.style.display = 'block';
-  }
-
   handleClickBtn(e) {
     e.preventDefault();
-    this.showMessage();
+    const parentBtn = e.currentTarget.parentElement;
+    const previousElement = parentBtn.previousElementSibling;
+    previousElement.style.display = 'block';
   }
 
-  handleClickClose() {
-    this.formMessage.style.display = 'none';
+  handleClickClose(e) {
+    const el = e.currentTarget;
+    const parentClose = el.parentElement.parentElement.parentElement;
+    parentClose.style.display = 'none';
+  }
+
+  addEventOnButtons() {
+    this.sendForm.forEach(send => {
+      send.addEventListener('click', this.handleClickBtn);
+    })
+
+    this.closeMessage.forEach(close => {
+      close.addEventListener('click', this.handleClickClose);
+    })
   }
 
   init() {
-    this.sendForm.addEventListener('click', this.handleClickBtn);
-    this.closeMessage.addEventListener('click', this.handleClickClose);
+    this.addEventOnButtons();
     return this;
   }
 }

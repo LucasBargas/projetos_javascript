@@ -205,6 +205,19 @@
   .chefsSection-content {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact-topics {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .contact-topics ul {
+    width: 100%;
+  }
+  
+  .contact-topics .form-area{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {

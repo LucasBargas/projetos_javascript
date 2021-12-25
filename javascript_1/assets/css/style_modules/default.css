@@ -820,14 +820,11 @@ body {
 
 .sendForm {
   padding-top: 20px;
-}
-
-.reservationSection-form .sendForm {
   display: flex;
   justify-content: center;
 }
 
-.reservationSection-form .sendForm .btn {
+.sendForm .btn {
   display: block;
   background: var(--golden-color);
   color: var(--white-color);
@@ -840,7 +837,7 @@ body {
   transition: .5s;
 }
 
-.reservationSection-form .sendForm .btn:hover {
+.sendForm .btn:hover {
   background: #e7b154;
 }
 
@@ -1039,4 +1036,96 @@ body {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+.contact-topics li {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-topics li:not(:first-of-type) {
+  margin-top: 35px;
+}
+
+.contactSection-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: var(--golden-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactSection-icon span {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 20px;
+  width: 20px;
+}
+
+.contact-topics li p {
+  font-size: 0.875rem;
+  opacity: .7;
+}
+
+.contact-topics li p:first-of-type {
+  margin-top: 5px;
+}
+
+.contactSection-form {
+  padding-top: 40px;
+}
+
+.contact-topics {
+  gap: 20px;
+}
+
+.contact-topics ul {
+  width: 35%;
+}
+
+.contact-topics .form-area{
+  width: 65%;
+}
+
+.form-area form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.contact-topics form input:nth-of-type(3) {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.contact-topics form textarea {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  resize: none;
+  height: 190px;
+}
+
+.contact-topics form input, .contact-topics form textarea {
+  outline: 0;
+  background: var(--dark-bg);
+  border: 1px solid #625b4b;
+  transition: .4s;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  padding: 12px 10px;
+  color: var(--white-color);
+}
+
+.contact-topics form input:focus, 
+.contact-topics form textarea:focus {
+  border: 1px solid var(--golden-color);
+}
+
+.contact-topics form input::placeholder, 
+.contact-topics form textarea::placeholder {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
 }
