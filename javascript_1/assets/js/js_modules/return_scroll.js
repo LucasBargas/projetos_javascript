@@ -9,7 +9,6 @@ export default class ReturnScroll {
   }
 
   handleScroll() {
-    console.log('scroll')
     if (window.pageYOffset > 300) this.returnButton.classList.add('show');
     else if (window.pageYOffset < 500) this.returnButton.classList.remove('show');
   }
