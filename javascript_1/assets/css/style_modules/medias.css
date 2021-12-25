@@ -277,6 +277,11 @@
   .chefsSection-content {
     grid-template-columns: 1fr;
   }
+
+  .form-area form {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 400px) {
