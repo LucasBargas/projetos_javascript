@@ -3,10 +3,11 @@ import SmoothScroll from "./js_modules/smooth_scroll.js";
 import FilterMenu from "./js_modules/filter_menu.js";
 import TabNav from "./js_modules/tab_nav.js";
 import Slide from "./js_modules/slide_events.js";
-import FormMessage from "./js_modules/form-message.js";
+import FormMessage from "./js_modules/form_message.js";
 import TestimonialsSlide from "./js_modules/testimonials_slide.js";
 import ReturnScroll from "./js_modules/return_scroll.js";
 import ScrollAnimation from "./js_modules/scroll_animation.js";
+import NavLinks from "./js_modules/nav_links.js";
 
 const mobileMenu = new MobileMenu();
 mobileMenu.init();
@@ -34,3 +35,6 @@ returnScroll.init();
 
 const scrollAnimation = new ScrollAnimation();
 scrollAnimation.init();
+
+const navLinks = new NavLinks();
+navLinks.init();
