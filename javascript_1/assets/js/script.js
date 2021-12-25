@@ -6,6 +6,7 @@ import Slide from "./js_modules/slide_events.js";
 import FormMessage from "./js_modules/form-message.js";
 import TestimonialsSlide from "./js_modules/testimonials_slide.js";
 import ReturnScroll from "./js_modules/return_scroll.js";
+import ScrollAnimation from "./js_modules/scroll_animation.js";
 
 const mobileMenu = new MobileMenu();
 mobileMenu.init();
@@ -30,3 +31,6 @@ testimonialsSlide.init();
 
 const returnScroll = new ReturnScroll();
 returnScroll.init();
+
+const scrollAnimation = new ScrollAnimation();
+scrollAnimation.init();
