@@ -13,20 +13,8 @@
   text-decoration: none;
 }
 
-:root {
-  --white-color: #ffffff;
-  --dark-bg: #0c0b09;
-  --less-dark-bg: #191814;
-  --gray-color: #d0d0cf;
-  --golden-color: #cda45e;
-  --ball-slide: #6b6d6f;
-  --sub-tittle: #aaaaaa;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
-  color: var(--white-color);
-  background: var(--dark-bg);
 }
 
 .flex {
