@@ -29,7 +29,6 @@ export default class Slide {
       const position = -(element.offsetLeft) + calcPosition;
       return { element, position };
     });
-    console.log(this.slideArray);
   }
 
   slidesIndexNav(index) {
@@ -46,7 +45,6 @@ export default class Slide {
     const activeSlide = this.slideArray[index];
     this.moveSlide(activeSlide.position );
     this.slidesIndexNav(index);
-    console.log(this.index);
   }
 
   activeControlItem() {
