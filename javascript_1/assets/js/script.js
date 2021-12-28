@@ -4,7 +4,6 @@ import FilterMenu from "./js_modules/filter_menu.js";
 import TabNav from "./js_modules/tab_nav.js";
 import Slide from "./js_modules/slide_events.js";
 import FormMessage from "./js_modules/form_message.js";
-import TestimonialsSlide from "./js_modules/testimonials_slide.js";
 import ReturnScroll from "./js_modules/return_scroll.js";
 import ScrollAnimation from "./js_modules/scroll_animation.js";
 
@@ -25,9 +24,6 @@ slide.init();
 
 const formMessage = new FormMessage();
 formMessage.init();
-
-const testimonialsSlide = new TestimonialsSlide();
-testimonialsSlide.init();
 
 const returnScroll = new ReturnScroll();
 returnScroll.init();
