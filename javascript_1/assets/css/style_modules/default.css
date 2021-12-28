@@ -710,76 +710,9 @@ body {
   position: relative;
 }
 
-.eventsSection-slide-wrapper, .eventsTestimonials-slide-wrapper {
-  padding-top: 40px;
-  overflow: hidden;
-}
-
 /* .slide {
-  transform: translate3d(-1107px, 0, 0);
+  overflow: auto;
 } */
-
-.eventsSection-slide-single {
-  flex-shrink: 0;
-  width: 100%;
-  gap: 30px;
-}
-
-.eventsSection-slide-control ul, .eventsTestimonials-slide-control ul {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.eventsSection-slide-control li, .eventsTestimonials-slide-control li {
-  background: var(--ball-slide);
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  overflow: hidden;
-  text-indent: -999px;
-  cursor: pointer;
-}
-
-.eventsSection-slide-control li.activeSlide, .eventsTestimonials-slide-control li.activeSlide {
-  background: var(--golden-color);
-}
-
-.eventsSection-slide-single img {
-  max-width: 100%;
-  height: auto;
-}
-
-.eventsSection-slide-single h3 {
-  font-family: 'PLayfair Display', serif;
-  font-size: 1.625rem;
-  font-weight: 400;
-  color: var(--golden-color);
-}
-
-.eventsSection-slide-single .price p {
-  margin: 10px 0 12px 0;
-  font-size: 1.625rem;
-  font-weight: 700;
-  border-bottom: 2px solid var(--golden-color);
-  display: inline-block;
-}
-
-.eventsSection-slide-single .fst-italic {
-  font-style: italic;
-}
-
-.eventsSection-slide-single ul {
-  padding: 30px 0;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.eventsSection-slide-contentLeft,
-.eventsSection-slide-contentRight {
-  width: 50%;
-}
 
 .reservationSection-form {
   padding-top: 40px;
@@ -874,63 +807,6 @@ body {
 @keyframes showAlert {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-.eventsTestimonials {
-  background: var(--less-dark-bg);
-}
-
-.eventsTestimonials-slide-single {
-  width: calc(100% / 3);
-  flex-shrink: 0;
-  padding: 0 22px;
-  text-align: justify;
-}
-
-.eventsTestimonials-slide-single p {
-  border-radius: 6px;
-  background: #26231d;
-  padding: 16px 20px 60px 20px;
-  font-style: italic;
-}
-
-.eventsTestimonials-slide-single p::before,
-.eventsTestimonials-slide-single p::after {
-  content: '';
-  display: inline-block;
-  background-position: center;
-  background-size: 100% 100%;
-  background-image: url('../../images/icons/quote.svg');
-  width: 26px;
-  height: 26px;
-}
-
-.eventsTestimonials-slide-single p::before {
-  margin-right: 5px;
-}
-
-.eventsTestimonials-slide-single p::after {
-  transform: rotate(180deg);
-  margin-left: 5px;
-}
-
-.eventsTestimonials-slide-single figure img {
-  width: 90px;
-  border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.2);
-  margin: -40px 0 0 25px;
-}
-
-.eventsTestimonials-slide-single figure div {
-  padding: 7px 24px;
-  font-family: 'Playflair Display', serif;
-}
-
-.eventsTestimonials-slide-single figure div span {
-  display: block;
-  margin-top: 4px;
-  font-size: 0.875rem;
-  opacity: .7;
 }
 
 .gallerySection-area.space {
@@ -1321,4 +1197,90 @@ body {
 .sendForm .btn, .finalContent-single:last-of-type form .btn {
   text-transform: unset;
   font-size: 1rem;
+}
+
+.eventsSection-area .default-title {
+  padding-bottom: 40px;
+}
+
+.eventsSection-slide-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eventsSection-slide {
+  display: flex;
+  transition: 0.5s;
+}
+
+.eventsSection-slide:hover {
+  will-change: transform;
+}
+
+.eventsSection-slide li {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.control {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.control span {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--ball-slide);
+  transition: .3s;
+}
+
+.control span.active {
+  background: #000;
+  background: var(--golden-color);
+}
+
+.eventsSection-slide-single {
+  gap: 30px;
+}
+
+.eventsSection-slide-left,
+.eventsSection-slide-right {
+  width: 50%;
+}
+
+.eventsSection-slide-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.eventsSection-slide-right h3 {
+  font-family: 'PLayfair Display', serif;
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: var(--golden-color);
+}
+
+.eventsSection-slide-right .price p {
+  margin: 10px 0 12px 0;
+  font-size: 1.625rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--golden-color);
+  display: inline-block;
+}
+
+.eventsSection-slide-right .font-italic {
+  font-style: italic;
+}
+
+.eventsSection-slide-right ul {
+  padding: 30px 0;
+}
+
+.eventsSection-slide-right ul li:not(:first-of-type) {
+  margin-top: 15px;
 }

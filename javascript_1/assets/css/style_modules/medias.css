@@ -1,23 +1,23 @@
 @media screen and (max-width: 1536px) {
-  .container {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
     max-width: 1500px;
   }
 }
 
 @media screen and (max-width: 1440px) {
-  .container {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
     max-width: 1400px;
   }
 }
 
 @media screen and (max-width: 1366px) {
-  .container {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
     max-width: 1320px;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  .container {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
     max-width: 1260px;
   }
 }
@@ -39,22 +39,29 @@
     grid-template-columns: 1fr;
   }
 
-  .eventsSection-slide-single {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .eventsSection-slide-contentLeft,
-  .eventsSection-slide-contentRight {
-    width: 100%;
-  }
-
   .gallery-content {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .gallery-content figure:hover img {
     transform: scale(1);
+  }
+
+  .eventsSection-slide {
+    transition: 0.3s;
+  }
+
+  .eventsSection-slide-single {
+    flex-direction: column;
+  }
+
+  .eventsSection-slide-left,
+  .eventsSection-slide-right {
+    width: 100%;
+  }
+
+  .control {
+    padding-top: 60px;
   }
 }
 
@@ -189,19 +196,6 @@
     flex-direction: column;
   }
 
-  .eventsTestimonials-slide-single {
-    width: 100%;
-    padding: 0 10px;
-  }
-
-  .eventsTestimonials-slide-single:nth-of-type(6), .eventsTestimonials-slide-single:nth-of-type(7) {
-    display: none;
-  }
-
-  .eventsTestimonials-slide-control ul {
-    padding-top: 40px;
-  }
-
   .chefsSection-content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -271,10 +265,6 @@
     max-width: 300px;
   }
 
-  .eventsTestimonials-slide-single {
-    padding: 0;
-  }
-
   .gallery-content {
     grid-template-columns: 1fr;
   }
@@ -328,6 +318,11 @@
     position: static;
     width: 100%;
   }
+
+  .eventsSection-slide-right h3,  
+  .eventsSection-slide-right .price p {
+    font-size: 1.375rem;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -360,11 +355,6 @@
     display: block;
     text-align: center;
     gap: 5px;
-  }
-
-  .eventsSection-slide-single h3,
-  .eventsSection-slide-single .price p {
-    font-size: 1.375rem;
   }
 
   .reservationSection-form input,
@@ -425,18 +415,5 @@
 
   .specialContent-area h3 {
     font-size: 1.25rem;
-  }
-
-  .eventsTestimonials-slide-single p::before, .eventsTestimonials-slide-single p::after {
-    width: 20px;
-    height: 20px;
-  }
-
-  .eventsTestimonials-slide-single p, .eventsTestimonials-slide-single h3 {
-    font-size: 0.875rem;
-  }
-  
-  .eventsTestimonials-slide-single figure div span {
-    font-size: 0.75rem;
   }
 }

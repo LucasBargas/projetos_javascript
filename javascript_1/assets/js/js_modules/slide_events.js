@@ -1,48 +1,87 @@
 export default class Slide {
   constructor() {
-    this.slide = document.querySelector('.jsSlide');
-    this.slideItens = document.querySelectorAll('.jsSlide .eventsSection-slide-single');
-    this.slideControls = document.querySelector('.jsSlideControl');
+    this.slide = document.querySelector('.eventsSection-slide');
+    this.control = document.querySelectorAll('.control span');
 
-    this.events = ['click', 'touchstart'];
-    this.activeSlide = 'activeSlide';
+    this.activeClass = 'active';
+    this.events = ['click', 'touchstart']
+    this.addControl();
 
-    this.classOnControls = this.classOnControls.bind(this);
+    this.control[1].classList.add(this.activeClass);
   }
 
-  createControl() {
-    this.control = document.createElement('ul');
+  // Slides config
 
-    this.slideItens.forEach((slide, index) => {
-      this.control.innerHTML += `<li><a href="#slide${index + 1}">${index + 1}</a></li>`;
-    })
-    this.slideControls.appendChild(this.control);
-
-    this.controlArray = [...this.control.children];
-    this.controlArray[0].classList.add(this.activeSlide);
+  moveSlide(distX) {
+    this.slide.style.transform = `translate3d(${distX}px, 0, 0)`;
   }
 
-  classOnControls(e) {
-    e.preventDefault();
-
-    this.controlArray.forEach(ctrl => {
-      ctrl.classList.remove(this.activeSlide);
-    })
-
-    e.target.classList.add(this.activeSlide);
+  slidePosition(slide) {
+    const calcPosition = slide.offsetLeft % this.slide.offsetWidth;
+    return calcPosition;
   }
 
-  addEventOnBalls() {
+  slidesConfig() {
+    this.slideArray = [...this.slide.children].map(element => {
+      const calcPosition = this.slidePosition(element);
+      const position = -(element.offsetLeft) + calcPosition;
+      return { element, position };
+    });
+    console.log(this.slideArray);
+  }
+
+  slidesIndexNav(index) {
+    const last = this.slideArray.length - 1;
+     
+    this.index = {
+      prev: index ? index - 1 : undefined,
+      active: index,
+      next: index === last ? undefined : index + 1
+    }
+  }
+
+  changeSlide(index) {
+    const activeSlide = this.slideArray[index];
+    this.moveSlide(activeSlide.position );
+    this.slidesIndexNav(index);
+    console.log(this.index);
+  }
+
+  activeControlItem() {
+    this.control.forEach(item => item.classList.remove(this.activeClass))
+    this.control[this.index.active].classList.add(this.activeClass);
+  }
+
+  addControl() {
     this.events.forEach(userEvent => {
-      this.controlArray.forEach(ctrl => {
-        ctrl.addEventListener(userEvent, this.classOnControls);
+      this.control.forEach((item, index) => {
+        item.addEventListener(userEvent, e => {
+          e.preventDefault();
+          this.changeSlide(index);
+          this.activeControlItem();
+        })
       })
     })
   }
 
+  onResize() {
+    this.slidesConfig();
+    this.changeSlide(this.index.active);
+  }
+
+  addSlideEvents() {
+    window.addEventListener('resize', this.onResize);
+  }
+
+  bindEvents() {
+    this.onResize = this.onResize.bind(this);
+  }
+
   init() {
-    this.createControl();
-    this.addEventOnBalls();
+    this.bindEvents();
+    this.addSlideEvents();
+    this.slidesConfig();
+    this.changeSlide(1);
     return this;
   }
 }
