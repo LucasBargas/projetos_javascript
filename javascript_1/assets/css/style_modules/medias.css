@@ -290,6 +290,14 @@
     grid-template-columns: 1fr;
     gap: 40px 0;
   }
+
+  .modal-area{
+    width: 90% !important;
+  }
+
+  .modal-area-content p{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -330,6 +338,14 @@
   .eventsSection-slide-right h3,  
   .eventsSection-slide-right .price p {
     font-size: 1.375rem;
+  }
+
+  .modal-area-content h2{
+    font-size: 1.25rem;
+  }
+
+  .modal-area-content p, .modal-button{
+    font-size: 0.88rem;
   }
 }
 
