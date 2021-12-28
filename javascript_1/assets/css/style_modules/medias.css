@@ -63,6 +63,14 @@
   .control {
     padding-top: 60px;
   }
+
+  .eventsSection-slide-left {
+    padding-left: 0;
+  }
+  
+  .eventsSection-slide-right {
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 800px) {
