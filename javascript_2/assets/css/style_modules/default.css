@@ -1,0 +1,1293 @@
+/* 
+  * Fontes utilizadas:
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+:root {
+  --white-color: #ffffff;
+  --dark-bg: #0c0b09;
+  --less-dark-bg: #191814;
+  --gray-color: #d0d0cf;
+  --golden-color: #cda45e;
+  --ball-slide: #6b6d6f;
+  --sub-tittle: #aaaaaa;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--white-color);
+  background: var(--dark-bg);
+}
+
+.flex {
+  display: flex;
+}
+
+.space {
+  padding: 60px 4%;
+}
+
+.btn {
+  padding: 8px 25px;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  border-radius: 50px;
+}
+
+.transparent-btn {
+  border: 2px solid var(--golden-color);
+  transition: .4s;
+}
+
+.transparent-btn:hover {
+  background: var(--golden-color);
+  color: var(--white-color);
+}
+
+.default-title h2 {
+  text-transform: uppercase;
+}
+
+.default-title h2 {
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  color: var(--sub-tittle);
+}
+
+.default-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 4px 10px;
+}
+
+.default-title h1 {
+  color: var(--golden-color);
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/hero-bg.jpg');
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.header::after {
+  content: '';
+  background: var(--dark-bg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+}
+
+.headerNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.headerNav-dates.space {
+  padding: 9px 4%;
+}
+
+.headerNav-dates {
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.headerNav-dates-info {
+  gap: 30px;
+}
+
+.number, .hours {
+  align-items: center;
+}
+
+.iconHeader::before {
+  content: '';
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+.number::before {
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/phone.svg');
+}
+
+.hours::before {
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/clock.svg');
+}
+
+.headerNav-dates-lang .en {
+  color: var(--golden-color);
+}
+
+.headerNav-dates-lang .en::after {
+  content: '/';
+  color: var(--white-color);
+  margin: 0 10px;
+}
+
+.headerNav-dates-lang .de a {
+  color: var(--white-color);
+}
+
+.closeMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.closeMobile button {
+  display: flex;
+  background: transparent;
+  border: 0;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobileIcon {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 28px;
+  height: 28px;
+}
+
+.closeIcon {
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/close.svg');
+}
+
+.headerNav-links {
+  background: rgba(12, 11, 9, 0.6);
+  position: relative;
+}
+
+.headerNav-links-area.space {
+  padding: 15px 4%;
+}
+
+.headerNav-links-area {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.headerNav-links-area a {
+  color: var(--white-color);
+}
+
+.headerNav-brand a {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+
+.headerNav-menu a {
+  font-size: 0.875rem;
+  padding: 14.5px 12px;
+  transition: .5s;
+  display: block;
+}
+
+.headerNav-menu a:hover {
+  color: var(--golden-color);
+}
+
+.menuMobile {
+  display: none;
+}
+
+.menuMobile button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobileIcon {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 28px;
+  height: 28px;
+}
+
+.menuIcon {
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/mobile.svg');
+}
+
+.headerText {
+  align-items: center;
+  position: relative;
+  top: 115px;
+  z-index: 3;
+  height: calc(100% - 115px);
+}
+
+.headerText.space {
+  padding: 0 4%;
+}
+
+.headerText-area {
+  width: 100%;
+  animation: headerAnimation 1.5s forwards;
+}
+
+@keyframes headerAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.headerText-buttons {
+  width: 70%;
+}
+
+.headerText-buttons h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+
+.headerText-buttons span {
+  color: var(--golden-color);
+}
+
+.headerText-buttons p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375rem;
+  margin-top: 10px;
+}
+
+.headerText-actions ul {
+  padding-top: 30px;
+  gap: 15px;
+}
+
+.headerText-actions a {
+  display: block;
+  color: var(--white-color);
+}
+
+.headerText-play {
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.playButton {
+  justify-content: center;
+  align-items: center;
+  background: var(--golden-color);
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+.playIcon {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/play.svg');
+  height: 32px;
+  width: 32px;
+}
+
+.aboutSection {
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/about-bg.jpg');
+  background-attachment: fixed;
+  position: relative;
+}
+
+.aboutSection::before {
+  content: '';
+  background: var(--dark-bg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.aboutArea {
+  position: relative;
+  gap: 40px;
+}
+
+.aboutArea.space {
+  padding: 80px 4%;
+}
+
+.aboutArea-text, .aboutArea-img {
+  width: 50%;
+}
+
+.aboutArea-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.625rem;
+}
+
+.aboutArea-text > p {
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.aboutArea-list {
+  padding-top: 20px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.aboutArea-list li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: -.125rem;
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/check.svg');
+  background-position: center;
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+}
+
+.aboutArea-final-text {
+  padding-top: 30px;
+}
+
+.aboutArea-img figure {
+  position: relative;
+  transition: .6s;
+}
+
+.aboutArea-img figure:hover {
+  transform: scale(1.04);
+}
+
+.aboutArea-img figure::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  border-left: 5px solid #cda45e;
+  border-top: 5px solid #cda45e;
+  transition: .5s;
+}
+
+.aboutArea-img figure::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-right: 5px solid #cda45e;
+  border-bottom: 5px solid #cda45e;
+  transition: .5s;
+}
+
+.aboutArea-img figure:hover::before{
+  transform: translate3d(-7px, -7px, 0);
+}
+
+.aboutArea-img figure:hover::after{
+  transform: translate3d(7px, 7px, 0);
+}
+
+.aboutArea-img img {
+  max-width: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.whyUsSection {
+  background: var(--dark-bg);
+}
+
+.whyUsSections-list {
+  padding-top: 40px;
+}
+
+.whyUsSections-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.whyUsSections-list li {
+  background: var(--less-dark-bg);
+  padding: 50px 30px;
+  transition: 1s;
+}
+
+.whyUsSections-list h3 {
+  color: var(--golden-color);
+  font-size: 1.75rem;
+  transition: .5s;
+}
+
+.whyUsSections-list h4 {
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  margin: 20px 0;
+}
+
+.whyUsSections-list p {
+  font-size: 0.9375rem;
+  max-width: 295px;
+}
+
+.whyUsSections-list li:hover {
+  background: var(--golden-color);
+  transition: 1s;
+}
+
+.whyUsSections-list li div {
+  transform: translate3d(0, 0, 0);
+  transition: 1s;
+}
+
+.whyUsSections-list li:hover div {
+  transform: translate3d(0, -20px, 0);
+  transition: 2s;
+}
+
+.whyUsSections-list li:hover h3 {
+  color: var(--white-color);
+}
+
+.menuSection {
+  background: var(--less-dark-bg);
+}
+
+.menuSection-nav {
+  padding: 40px 0;
+}
+
+.menuSection-nav ul {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.menuSection-nav ul li {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: .5s;
+}
+
+.menuSection-nahoverv ul li {
+  color: var(--golden-color);
+}
+
+.menuSection-nav ul li.showMenu {
+  color: var(--golden-color);
+}
+
+.menuSection-options ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.menuSection-options ul li img {
+  width: 70px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+.allOptions-plate-info {
+  margin-left: 18px;
+}
+
+.allOptions-plate-info a {
+  color: var(--white-color);
+  transition: .5s;
+}
+.allOptions-plate-info a:hover {
+  color: var(--golden-color);
+}
+
+.menuSection-options div:first-of-type {
+  width: 100%;
+}
+
+.allOptions-plate-info div *{
+  display: block;
+}
+
+.allOptions-plate-info div {
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+.allOptions-plate-info a {
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.allOptions-plate-info span:first-of-type {
+  color: #bab3a6;
+}
+
+.allOptions-plate-info span:last-of-type {
+  color: var(--golden-color);
+}
+
+.allOptions-plate-description {
+  color: var(--sub-tittle);
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.menuSection-options ul {
+  display: none;
+}
+
+.menuSection-options ul.showMenu {
+  display: grid;
+  animation: showMenuContent .5s forwards;
+}
+
+@keyframes showMenuContent {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.between {
+  width: 65%;
+  height: 1px;
+  background: var(--gray-color);
+}
+
+.specialsSection-tabNav {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding-top: 40px;
+}
+
+.tabNav ul {
+  border-right: 2px solid var(--golden-color);
+}
+
+.tabNav li {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  padding: 14px 15px;
+  transition: .5s;
+}
+
+.tabNav li:hover {
+  color: var(--golden-color);
+}
+
+.tabNav li.activeTab {
+  background: var(--golden-color);
+  color: var(--dark-bg);
+}
+
+.tabNav li.activeTab:hover {
+  color: var(--dark-bg);
+}
+
+.specialContent-area {
+  gap: 10px;
+  padding-left: 24px;
+  display: none;
+}
+
+.specialContent-area.activeTab {
+  display: flex;
+  animation: showTabContent .5s forwards;
+}
+
+@keyframes showTabContent {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.specialContent-area h3 {
+  font-family: 'PLayfair Display', serif;
+  font-size: 1.625rem;
+}
+
+.specialContent-area p:first-of-type {
+  color: #aaaaaa;
+  font-style: italic;
+  margin: 16px 0;
+}
+
+.specialContent-area p:last-of-type {
+  color: #aaaaaa;
+}
+
+.specialContent-area img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.eventsSection {
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/events-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.eventsSection::before {
+  content: '';
+  background: var(--dark-bg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.eventsSection-area {
+  position: relative;
+}
+
+/* .slide {
+  overflow: auto;
+} */
+
+.reservationSection-form {
+  padding-top: 40px;
+}
+
+.reservationSection-form .form .form-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reservationSection-form input,
+.reservationSection-form textarea {
+  display: block;
+  border: 1px solid var(--golden-color);
+  background: var(--dark-bg);
+  outline: 0;
+  font-size: 1rem;
+  padding: 12px 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--white-color);
+}
+
+.reservationSection-form input::placeholder,
+.reservationSection-form textarea::placeholder {
+  color: var(--white-color);
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.reservationSection-form form textarea {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  height: 127px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.sendForm {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sendForm .btn {
+  display: block;
+  background: var(--golden-color);
+  color: var(--white-color);
+  padding: 10px 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 60px;
+  border: 0;
+  transition: .5s;
+}
+
+.sendForm .btn:hover {
+  background: #e7b154;
+}
+
+.formMessage {
+  margin-top: 20px;
+  display: none;
+  animation: showAlert 1s forwards;
+}
+
+.formMessage-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: tomato;
+  padding: 10px;
+}
+
+.formMessage-area p {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  font-size: 0.875rem;
+}
+
+.close {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/close.svg');
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@keyframes showAlert {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.gallerySection-area.space {
+  padding: 60px 4% 40px 4%;
+}
+
+.gallery-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 15px 60px 15px;
+}
+
+.gallery-content figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: .5s;
+  border: 2px solid #26231d;;
+}
+
+.gallery-content figure {
+  overflow: hidden;
+}
+
+.gallery-content figure:hover img {
+  transform: scale(1.1);
+}
+
+.chefsSection-content {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.chefsSection-content-single {
+  position: relative;
+}
+
+.chefsSection-content-single figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+.chefsSection-content-single .chefs-info {
+  opacity: 0;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  bottom: 4.5px;
+  left: 0;
+  background: linear-gradient(
+    0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+  width: 100%;
+  height: 85%;
+  transition: .3s;
+  padding-bottom: 15px;
+}
+
+.chefsSection-content-single .chefs-info h3 {
+  font-family: 'PLayfair Display', Serif;
+  font-weight: 700;
+}
+
+.chefsSection-content-single .chefs-info p {
+  font-style: italic;
+  font-size: 0.8125rem;
+  margin-top: 3px;
+}
+
+.chefs-info-medias {
+  justify-content: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.chefs-info-medias a {
+  color: var(--white-color);
+  transition: .5s;
+}
+
+.chefs-info-medias a:hover {
+  color: var(--golden-color);
+}
+
+.chefsSection-content-single:hover .chefs-info {
+  opacity: 1;
+}
+
+.chefsSection-content-single:hover .chefs-info-name, 
+.chefsSection-content-single:hover .chefs-info-medias {
+  animation: chefsInfoShow .4s forwards;
+}
+
+@keyframes chefsInfoShow {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.contact-topics li {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-topics li:not(:first-of-type) {
+  margin-top: 35px;
+}
+
+.contactSection-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background: var(--golden-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactSection-icon span {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 20px;
+  width: 20px;
+}
+
+.contact-topics li p {
+  font-size: 0.875rem;
+  opacity: .7;
+}
+
+.contact-topics li p:first-of-type {
+  margin-top: 5px;
+}
+
+.contactSection-form {
+  padding-top: 40px;
+}
+
+.contact-topics {
+  gap: 20px;
+}
+
+.contact-topics ul {
+  width: 35%;
+}
+
+.contact-topics .form-area{
+  width: 65%;
+}
+
+.form-area form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.contact-topics form input:nth-of-type(3) {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+.contact-topics form textarea {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  resize: none;
+  height: 190px;
+  overflow-y: auto;
+}
+
+.contact-topics form input, .contact-topics form textarea {
+  outline: 0;
+  background: var(--dark-bg);
+  border: 1px solid #625b4b;
+  transition: .4s;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  padding: 12px 10px;
+  color: var(--white-color);
+}
+
+.contact-topics form input:focus, 
+.contact-topics form textarea:focus {
+  border: 1px solid var(--golden-color);
+}
+
+.contact-topics form input::placeholder, 
+.contact-topics form textarea::placeholder {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.finalContent-area {
+  border-top: 2px solid #28251e;
+  border-bottom: 2px solid #28251e;
+}
+
+.finalContent-navs {
+  display: grid;
+  grid-template-columns: 30% 20% 20% 30%;
+}
+
+.finalContent-navs h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.finalContent-navs h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+.finalContent-navs {
+  font-size: 0.875rem;
+}
+
+.finalContent-single:first-of-type ul {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.finalContent-single:first-of-type ul:first-of-type {
+  padding: 25px 0;
+}
+
+.finalContent-single:first-of-type ul span {
+  font-weight: 700;
+}
+
+.finalContent-single:first-of-type ul:nth-of-type(2) li {
+  gap: 5px;
+}
+
+.finalContent-single:first-of-type ul:last-of-type {
+  padding-top: 15px;
+  gap: 10px;
+}
+
+.finalContent-single:first-of-type ul:last-of-type a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: #26231d;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.finalContent-single:first-of-type ul:last-of-type a:hover {
+  background: var(--golden-color);
+}
+
+.finalContent-single:first-of-type ul:last-of-type a span {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 18px;
+  height: 18px;
+}
+
+.finalContent-single:not(:first-of-type) a {
+  color: var(--white-color);
+  transition: .5s;
+}
+
+.finalContent-single:not(:first-of-type) a:hover {
+  color: var(--golden-color);
+}
+
+.finalContent-single:not(:first-of-type) ul {
+  padding-top: 25px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.finalContent-single:not(:first-of-type) ul li::before {
+  content: '';
+  display: inline-block;
+  background-image: url('https://javascript-1.projetoslucasbargas.com/assets/images/icons/chevron-right.svg');
+  background-position: center;
+  background-size: 100% 100%;
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.finalContent-single:last-of-type ul li::before {
+  display: none;
+}
+
+.finalContent-single:last-of-type form {
+  padding-top: 25px;
+  display: flex;
+  position: relative;
+}
+
+.finalContent-single:last-of-type form input {
+  width: 100%;
+  height: 43px;
+  background: #26231d;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  padding: 0 125px 0 15px;
+  color: var(--white-color);
+  font-size: 1rem;
+}
+
+.finalContent-single:last-of-type form button {
+  height: 43px;
+  border-radius: 30px;
+  border: 0;
+  padding: 0 20px 2px 20px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  background: var(--golden-color);
+  color: var(--white-color);
+}
+
+.finalContent-copy {
+  background: #000000;
+}
+
+.finalContent-copy-area.space {
+  padding: 30px 4%;
+  text-align: center;
+}
+
+.finalContent-copy-area {
+  font-size: 0.875rem;
+}
+
+.finalContent-copy-area span {
+  font-weight: 700;
+}
+
+.finalContent-copy-area a {
+  color: var(--golden-color);
+}
+
+.finalContent-copy-area p:last-of-type {
+  margin-top: 10px;
+}
+
+.return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--golden-color);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: .5s;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  z-index: 2000;
+}
+
+.return:hover {
+  background: var(--golden-color);
+}
+
+.return svg {
+  color: var(--golden-color);
+  width: 28px;
+  height: 28px;
+  transition: .5s;
+}
+
+.return:hover svg {
+  color: var(--white-color);
+}
+
+.sendForm .btn, .finalContent-single:last-of-type form .btn {
+  text-transform: unset;
+  font-size: 1rem;
+}
+
+.eventsSection-area .default-title {
+  padding-bottom: 40px;
+}
+
+.eventsSection-slide-wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.eventsSection-slide {
+  display: flex;
+  transition: 0.5s;
+}
+
+.eventsSection-slide:hover {
+  will-change: transform;
+}
+
+.eventsSection-slide li {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.control {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.control span {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--ball-slide);
+  transition: .3s;
+}
+
+.control span.active {
+  background: #000;
+  background: var(--golden-color);
+}
+
+.eventsSection-slide-single {
+  gap: 30px;
+}
+
+.eventsSection-slide-left {
+  padding-left: 7px;
+}
+
+.eventsSection-slide-right {
+  padding-right: 7px;
+}
+
+.eventsSection-slide-left,
+.eventsSection-slide-right {
+  width: 50%;
+}
+
+.eventsSection-slide-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.eventsSection-slide-right h3 {
+  font-family: 'PLayfair Display', serif;
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: var(--golden-color);
+}
+
+.eventsSection-slide-right .price p {
+  margin: 10px 0 12px 0;
+  font-size: 1.625rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--golden-color);
+  display: inline-block;
+}
+
+.eventsSection-slide-right .font-italic {
+  font-style: italic;
+}
+
+.eventsSection-slide-right ul {
+  padding: 30px 0;
+}
+
+.eventsSection-slide-right ul li:not(:first-of-type) {
+  margin-top: 15px;
+}

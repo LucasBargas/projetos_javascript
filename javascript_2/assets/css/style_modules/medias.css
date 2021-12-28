@@ -1,0 +1,443 @@
+@media screen and (max-width: 1536px) {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
+    max-width: 1500px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
+    max-width: 1400px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
+    max-width: 1320px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .container, .slide-wrapper, .eventsSection-slide-wrapper {
+    max-width: 1260px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .aboutArea-img figure:hover {
+    transform: scale(1);
+  }
+
+  .aboutArea-img figure:hover::before{
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .aboutArea-img figure:hover::after{
+    transform: translate3d(0, 0, 0);
+  }
+
+  .menuSection-options ul {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-content figure:hover img {
+    transform: scale(1);
+  }
+
+  .eventsSection-slide {
+    transition: 0.3s;
+  }
+
+  .eventsSection-slide-single {
+    flex-direction: column;
+  }
+
+  .eventsSection-slide-left,
+  .eventsSection-slide-right {
+    width: 100%;
+  }
+
+  .control {
+    padding-top: 60px;
+  }
+
+  .eventsSection-slide-left {
+    padding-left: 0;
+  }
+  
+  .eventsSection-slide-right {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .headerNav-button {
+    display: none;
+  }
+
+  .menuMobile {
+    display: flex;
+  }
+
+  .closeMobile {
+    display: none;
+  }
+
+  .closeMobile.show {
+    display: block;
+    animation: showMenu .4s forwards;
+  }
+
+  .headerNav-menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -37px;
+    left: 0;
+    background: rgba(12, 11, 9, 0.8);
+    width: 100%;
+    height: 100vh;
+  }
+
+  .headerNav-menu.show {
+    display: flex;
+    animation: showMenu .4s forwards;
+  }
+
+  @keyframes showMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .headerNav-menu ul {
+    display: block;
+    background: var(--white-color);
+    width: 97%;
+    height: calc(97vh - 37px);
+    margin-top: 30px;
+    border-radius: 5px;
+    overflow-y: auto;
+  }
+
+  .headerNav-menu a {
+    color: var(--dark-bg);
+    padding: 12px 12px;
+  }
+
+  .headerText-area {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headerText-buttons, .headerText-play {
+    width: 100%;
+  }
+
+  .headerText-actions ul {
+    justify-content: center;
+    padding-top: 25px;
+  }
+
+  .headerText-buttons h1 {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+
+  .headerText-buttons p {
+    font-size: 1.12rem;
+    margin-top: 5px;
+  }
+
+  .playButton {
+    height: 60px;
+    width: 60px;
+  }
+
+  .headerText-play {
+    padding-top: 30px;
+  }
+
+  .aboutArea {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .aboutArea-text, .aboutArea-img {
+    width: 100%;
+  }
+
+  .whyUsSections-list ul {
+    grid-template-columns: 1fr;
+  }
+
+  .specialsSection-tabNav {
+    grid-template-columns: 100%;
+  }
+
+  .tabNav ul {
+    border: 0;
+  }
+
+  .specialContent-area {
+    padding-left: 0;
+  }
+
+  .specialContent-area.activeTab {
+    flex-direction: column-reverse;
+  }
+
+  .specialContent-area figure {
+    padding-top: 20px;
+  }
+
+  .reservationSection-form .form .form-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chefsSection-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-topics {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .contact-topics ul {
+    width: 100%;
+  }
+  
+  .contact-topics .form-area{
+    width: 100%;
+  }
+
+  .finalContent-navs {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerNav-dates {
+    justify-content: center;
+    font-size: 0.8125rem;
+  }
+
+  .headerNav-dates-lang {
+    display: none;
+  }
+
+  .aboutArea-img figure::before, 
+  .aboutArea-img figure::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menuSection-options ul {
+    gap: 45px;
+  }
+
+  .allOptions-plate-info {
+    margin-left: 0;
+  }
+
+  .allOptions-plate-info span:last-of-type {
+    margin: 10px 0;
+  }
+
+  .menuSection-options .flex {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .allOptions-plate-info div .between {
+    display: none;
+  }
+
+  .formMessage-area {
+    align-items: flex-start;
+  }
+
+  .formMessage-area p {
+    max-width: 300px;
+  }
+
+  .gallery-content {
+    grid-template-columns: 1fr;
+  }
+
+  .chefsSection-content {
+    grid-template-columns: 1fr;
+  }
+
+  .form-area form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .finalContent-navs {
+    grid-template-columns: 1fr;
+    gap: 40px 0;
+  }
+
+  .modal-area{
+    width: 90% !important;
+  }
+
+  .modal-area-content p{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .headerText-buttons h1 {
+    max-width: 300px;
+    margin: 0 auto;
+    line-height: 2.2rem;
+  }
+
+  .headerText-buttons p {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .default-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .formMessage-area p {
+    max-width: 280px;
+  }
+
+  .finalContent-single:last-of-type form input {
+    padding: 0 15px;
+  }
+
+  .finalContent-single:last-of-type form {
+    display: block;
+    position: static;
+  }
+
+  .finalContent-single:last-of-type form button {
+    margin-top: 15px;
+    position: static;
+    width: 100%;
+  }
+
+  .eventsSection-slide-right h3,  
+  .eventsSection-slide-right .price p {
+    font-size: 1.375rem;
+  }
+
+  .modal-area-content h2{
+    font-size: 1.25rem;
+  }
+
+  .modal-area-content p, .modal-button{
+    font-size: 0.88rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .headerNav-brand a {
+    font-size: 1.15rem;
+  }
+
+  .headerNav-dates-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .headerNav-menu {
+    top: -59px;
+  }
+
+  .headerNav-brand a {
+    font-size: 1.5rem;
+  }
+
+  .aboutArea-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .whyUsSections-list h4 {
+    font-size: 1.25rem;
+  }
+
+  .menuSection-nav ul {
+    display: block;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .reservationSection-form input,
+  .reservationSection-form textarea {
+    font-size: 0.8125rem;
+  }
+
+  .reservationSection-form input::placeholder,
+  .reservationSection-form textarea::placeholder {
+    font-size: 0.8125rem;
+  }
+
+  .reservationSection-form .sendForm .btn {
+    font-size: 0.8125rem;
+  }
+
+  .form-message p {
+    font-size: 0.75rem;
+  }
+
+  .formMessage-area p {
+    max-width: 220px;
+  }
+
+  .aboutArea-img figure::before, 
+  .aboutArea-img figure::after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .return {
+    width: 35px;
+    height: 35px;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .return svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .closeMobile button {
+    padding: 7px 5px;
+  }
+
+  .headerText-actions ul {
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 25px;
+  }
+
+  .whyUsSections-list li {
+    padding: 40px 20px;
+  }
+
+  .specialContent-area h3 {
+    font-size: 1.25rem;
+  }
+}
