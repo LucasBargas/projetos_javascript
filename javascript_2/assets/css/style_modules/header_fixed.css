@@ -1,9 +1,13 @@
-.jsHeader {
+.header {
     transition: .4s;
 }
 
-.jsHeader.scroller-fixed {
+.header.scroller-fixed {
     top: 0;
     background: var(--white-color);
     transition: .4s;
+}
+
+.header.scroller-fixed .headerArea-nav-side {
+    padding-right: 0;
 }
