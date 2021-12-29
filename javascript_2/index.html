@@ -17,11 +17,66 @@
   <!--google-fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Poppins:ital,wght@0,400;0,500;0,700;1,500&family=Raleway:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!--Slick-->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Segunda aplicação em JavaScript em construção!</h1>
+  <header class="header jsHeader">
+    <div class="header-area container space">
+      <div class="headerArea-nav">
+        <div class="headerArea-nav-brand">
+          <a href="index.html">Bethany</a>
+        </div>
 
+        <div class="headerArea-nav-side jsHeaderAreaNavSide">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="btn" href="index.html">Get Started</a></li>
+          </ul>
+
+          <div class="headerArea-nav-mobileClose jsMobileClose">
+            <button>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="headerArea-nav-mobileOpen jsMobileOpen">
+          <button>
+            <span></span>
+          </button>
+        </div>
+      </div><!--headerArea-nav-->
+    </div><!--header-area -->
+  </header><!--header-->
+
+  <section class="initial-bg">
+    <div class="initial-bg-content container space">
+      <h1>Your New Online Presence with Bethany</h1>
+      <p>We are team of talented designers making websites with Bootstrap</p>
+
+      <div class="initial-bg-btn">
+        <a class="btn" href="">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about"></section>
+
+  <!--slick-->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script type="text/javascript"></script>
+
+  <!--modules-script-->
   <script type="module" src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+.jsHeader {
+    transition: .4s;
+}
+
+.jsHeader.scroller-fixed {
+    top: 0;
+    background: var(--white-color);
+    transition: .4s;
+}
