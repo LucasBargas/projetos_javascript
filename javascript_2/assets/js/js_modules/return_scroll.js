@@ -1,4 +1,4 @@
-export default class returnScroll {
+export default class ReturnScroll {
   constructor() {
     this.buttonReturn = document.querySelector('.jsReturn');
     this.class = 'showButton';

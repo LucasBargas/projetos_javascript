@@ -94,6 +94,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .headerArea-nav-brand {
@@ -334,4 +335,34 @@ body {
 
 .aboutArea-right p:last-of-type {
   font-style: italic;
+}
+
+.counts {
+  background: var(--green-color);
+}
+
+.counts.default-section .space {
+  padding: 40px 4%;
+}
+
+.countsArea {
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.countsArea h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.countsArea p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  margin-top: 3px;
+}
+
+.counter-single {
+  text-align: center;
 }
