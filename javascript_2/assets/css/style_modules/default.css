@@ -79,6 +79,22 @@ body {
   padding: 60px 4%;
 }
 
+.default-title h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+}
+
+.default-title h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #009970;
+  margin-top: 12px;
+}
+
 .header {
   position: fixed;
   top: 20px;
@@ -470,4 +486,113 @@ body {
 .whyUs-area ul li p {
   font-size: 0.9375rem;
   font-weight: 500;
+}
+
+.cta {
+  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.7)), url('../../images/cta-bg.jpg') fixed center center;
+  background-size: cover;
+}
+
+.cta-area {
+  color: var(--white-color);
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.cta-area h2 {
+  font-size: 1.75rem;
+}
+
+.cta-area p {
+  margin: 16px 0 25px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.cta-area .cta-button .btn {
+  border: 3px solid var(--white-color);
+  color: var(--white-color);
+  display: inline-block;
+}
+
+.cta-area .cta-button .btn:hover {
+  border: 3px solid var(--green-color);
+  background: var(--green-color);
+}
+
+.services {
+  background: var(--bg-alternative);
+}
+
+.services-area {
+  display: flex;
+  gap: 24px;
+}
+
+.services-area .default-title {
+  width: 40%;
+}
+
+.services-list {
+  width: 60%;
+}
+
+.services-list ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.services-list ul li {
+  background: var(--white-color);
+  text-align: center;
+  padding: 40px 20px;
+  transition: .5s;
+}
+
+.services-list ul li .services-img {
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--green-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+  transition: .5s;
+}
+
+.services-list ul li .services-img svg {
+  width: 28px;
+  height: 28px;
+  color: var(--green-color);
+  transition: .5s;
+}
+
+.services-list ul li h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  transition: .5s;
+}
+
+.services-list ul li p {
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.services-list ul li:hover {
+  box-shadow: 0px 2px 15px rgba(0,0,0,.1);
+}
+
+.services-list ul li:hover .services-img {
+  background: var(--green-color);
+}
+
+.services-list ul li:hover .services-img svg {
+  color: var(--white-color);
+}
+
+.services-list ul li:hover h3 {
+  color: var(--green-color);
 }

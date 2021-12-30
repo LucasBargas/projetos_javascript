@@ -146,6 +146,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  .services-area {
+    flex-direction: column;
+  }
+
+  .services-area .default-title, .services-list  {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -170,6 +178,10 @@
   .aboutArea-left h2 {
     font-size: 2rem;
     line-height: 50px;
+  }
+
+  .services-list ul {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -246,6 +258,19 @@
   .whyUs-area ul li h3 {
     font-size: 1.15rem;
   }
+
+  .default-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-list ul li h3 {
+    font-size: 1.25rem;
+  }
+
+  .services-list ul li .services-img {
+    width: 54px;
+    height: 54px;
+  }
 }
 
 @media screen and (max-width: 300px) {
@@ -275,6 +300,14 @@
 
   .whyUs-area ul li h3 {
     font-size: 1rem;
+  }
+
+  .cta-area h2 {
+    font-size: 1.25rem;
+  }
+  
+  .cta-area p {
+    font-size: 0.9375rem;
   }
 }
 
@@ -325,7 +358,7 @@
     padding-top: 20px;
   }
 
-  .initial-bg-btn .btn {
+  .btn {
     font-size: 0.75rem;
   }
 
