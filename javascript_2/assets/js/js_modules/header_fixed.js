@@ -1,11 +1,9 @@
-import debounce from "./debounce.js";
-
 export default class HeaderFixed {
   constructor() {
     this.header = document.querySelector('.jsHeader');
     this.class = 'scroller-fixed';
 
-    this.handleScroll = debounce(this.handleScroll.bind(this), 50);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   handleScroll() {

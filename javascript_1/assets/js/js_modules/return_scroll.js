@@ -1,11 +1,9 @@
-import debounce from "./debounce.js";
-
 export default class ReturnScroll {
   constructor() {
     this.returnButton = document.querySelector('.jsReturn');
     this.events = ['click', 'touchstart'];
     this.handleClick = this.handleClick.bind(this);
-    this.handleScroll = debounce(this.handleScroll.bind(this), 50);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   handleScroll() {
