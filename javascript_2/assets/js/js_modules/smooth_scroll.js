@@ -17,7 +17,9 @@ export default class SmoothScroll {
   }
 
   smooth(getTop) {
-    window.scrollTo({ top: getTop - 100, behavior: 'smooth' });
+    const screen = window.matchMedia('(max-width: 2000px) and (min-width: 800px)').matches;
+    if (screen) window.scrollTo({ top: getTop - 60, behavior: 'smooth' })
+    else if (!screen) window.scrollTo({ top: getTop - 40, behavior: 'smooth' })
   }
 
   addEventsOnLinks() {

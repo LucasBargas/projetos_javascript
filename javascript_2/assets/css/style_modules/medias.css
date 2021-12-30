@@ -269,13 +269,12 @@
     font-size: 1.25rem;
   }
 
-  .whyUs-area .whyUs-text p, .whyUs-area ul li p {
+  .whyUs-area .whyUs-text p {
     font-size: 0.875rem;
   }
 
   .whyUs-area ul li h3 {
     font-size: 1rem;
-    margin-bottom: 15px;
   }
 }
 
