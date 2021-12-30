@@ -15,6 +15,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: var(--font-default);
 }
 
 :root {
@@ -22,6 +23,7 @@ body {
   --green-color: #009970;
   --font-default: #444444;
   --font-alternative: #36343a;
+  --bg-alternative: #f6f6f7;
 }
 
 .container {
@@ -38,6 +40,10 @@ body {
 
 .space {
   padding: 0 4%;
+}
+
+.default-section .space {
+  padding: 60px 4%;
 }
 
 .header {
@@ -144,6 +150,7 @@ body {
   background-position: center;
   background-size: cover;
   background-image: url('../../images/hero-bg.jpg');
+  background-attachment: fixed;
   position: relative;
   z-index: 1;
 }
@@ -199,9 +206,114 @@ body {
   border: 2px solid var(--green-color);
 }
 
-.about {
-  height: 700px;
+.clients {
+  background: var(--bg-alternative);
 }
+
+.clients .clientsArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clients .clientsArea figure {
+  padding: 16px 0;
+  text-align: center;
+}
+
+.clients .clientsArea figure:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+  transition: all .4s ease-in-out;
+}
+
+.clients .clientsArea img {
+  max-width: 40%;
+  height: auto;
+  filter: grayscale(100);
+}
+
+.aboutArea {
+  display: flex;
+  gap: 40px;
+}
+
+.aboutArea-left, .aboutArea-right {
+  width: 50%;
+}
+
+.aboutArea-left {
+  font-family: 'Raleway', sans-serif;
+}
+
+.aboutArea-left h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.aboutArea-left h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.aboutArea-right ul li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.aboutArea-right ul {
+  padding: 26px 0;
+}
+
+.aboutArea-right ul li:not(:first-of-type) {
+  margin-top: 10px;
+}
+
+.aboutArea-right ul li::before {
+  content: '';
+  vertical-align: -4px;
+  background-image: url('../../images/icons/check2-all.svg');
+  background-position: center;
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+
+.aboutArea-right p:last-of-type {
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .return {
   background: var(--green-color);

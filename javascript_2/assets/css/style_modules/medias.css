@@ -14,7 +14,7 @@
   }
 
   .initial-bg {
-    height: 640px;
+    height: 615px;
   }
 }
 
@@ -27,6 +27,10 @@
 @media screen and (max-width: 1100px) {
   .initial-bg {
     height: 80vh;
+  }
+
+  .aboutArea {
+    gap: 30px;
   }
 }
 
@@ -105,6 +109,25 @@
   .headerArea-nav-side ul li a {
     font-size: 0.9375rem;
   }
+
+  .initial-bg {
+    height: 100vh;
+  }
+
+  .clients .clientsArea {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aboutArea {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .aboutArea-left, .aboutArea-right {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -125,6 +148,11 @@
   .initial-bg-btn {
     padding-top: 30px;
   }
+
+  .aboutArea-left h2 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -141,6 +169,13 @@
   .initial-bg-content h1 {
     font-size: 1.5rem;
   }
+
+  .return {
+    width: 35px;
+    height: 35px;
+    bottom: 12px;
+    right: 10px;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -155,11 +190,36 @@
   .initial-bg-content p {
     margin-top: 20px;
   }
+
+  .aboutArea-left h2 {
+    font-size: 1.5rem;
+    line-height: 35px;
+  }
+
+  .aboutArea-left h3 {
+    font-size: 1.125rem;
+  }
+
+  .aboutArea-right {
+    font-size: 0.9375rem;
+  }
 }
 
 @media screen and (max-width: 300px) {
   .headerArea-nav-mobileClose button {
     padding: 3px 5px;
+  }
+
+  .aboutArea-left h2 {
+    font-size: 1.375rem;
+  }
+
+  .aboutArea-left h3 {
+    font-size: 1rem;
+  }
+
+  .aboutArea-right {
+    font-size: 0.875rem;
   }
 }
 
@@ -212,5 +272,10 @@
 
   .initial-bg-btn .btn {
     font-size: 0.75rem;
+  }
+
+  .aboutArea-left h2 {
+    font-size: 1.25rem;
+    line-height: 30px;
   }
 }
