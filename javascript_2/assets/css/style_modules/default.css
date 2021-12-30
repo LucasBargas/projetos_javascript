@@ -31,6 +31,38 @@ body {
   margin: 0 auto;
 }
 
+.return {
+  background: var(--green-color);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .4s;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s;
+}
+
+.return:hover {
+  background: rgba(0, 153, 112, .8);
+}
+
+.return span {
+  display: block;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url('../../images/icons/arrow-up-short.svg');
+  height: 28px;
+  width: 28px;
+}
+
 .btn {
   padding: 10px 25px;
   border-radius: 50px;
@@ -302,61 +334,4 @@ body {
 
 .aboutArea-right p:last-of-type {
   font-style: italic;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.return {
-  background: var(--green-color);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: .4s;
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: .4s;
-}
-
-.return:hover {
-  background: rgba(0, 153, 112, .8);
-}
-
-.return span {
-  display: block;
-  background-position: center;
-  background-size: 100% 100%;
-  background-image: url('../../images/icons/arrow-up-short.svg');
-  height: 28px;
-  width: 28px;
 }
