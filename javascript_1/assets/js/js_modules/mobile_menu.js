@@ -1,38 +1,51 @@
 export default class MobileMenu {
   constructor() {
-    this.menuButton = document.querySelector('.jsMenuMobile');
-    this.buttonClose = document.querySelector('.jsCloseMobile');
-    this.menuArea = document.querySelector('.jsHeaderNavMenu');
-    this.navLinks = document.querySelectorAll('.jsHeaderNavMenu a');
-    this.showMenu = 'show';
+    this.mobileArea = document.querySelector('.jsHeaderNavMenu');
+    this.mobileOpen = document.querySelector('.jsMenuMobile');
+    this.mobileClose = document.querySelector('.jsCloseMobile');
+    this.navLink = document.querySelectorAll('.jsHeaderNavMenu a');
+
     this.events = ['click', 'touchstart'];
-
-    this.handleUserEvent = this.handleUserEvent.bind(this);
+    this.class = 'show';
+    this.bindEvents();
   }
 
-  handleUserEvent(e) {
+  clickOutSide(e) {
+    const el = e.target;
+    if (el.classList.contains(this.class)) this.closeButton(e);
+  }
+
+  closeButton(e) {
     e.preventDefault();
-    this.menuArea.classList.toggle(this.showMenu);
-    this.buttonClose.classList.toggle(this.showMenu);
+    this.mobileArea.classList.remove(this.class);
+    this.mobileClose.classList.remove(this.class);
   }
 
-  addEventsOnButtons() {
-    this.events.forEach(userEvent => {
-      this.menuButton.addEventListener(userEvent, this.handleUserEvent);
-    })
-
-    this.events.forEach(userEvent => {
-      this.buttonClose.addEventListener(userEvent, this.handleUserEvent);
-    })
-
-    this.navLinks.forEach(link => {
-      link.addEventListener('click', this.handleUserEvent);
-    })
-
+  openButton(e) {
+    e.preventDefault();
+    this.mobileArea.classList.add(this.class);
+    this.mobileClose.classList.add(this.class);
   }
 
+  addEvents() {
+    this.events.forEach(userEvent => {
+      this.mobileOpen.addEventListener(userEvent, this.openButton);
+      this.mobileClose.addEventListener(userEvent, this.closeButton);
+    })
+
+    this.navLink.forEach(link => link.addEventListener('click', this.closeButton));
+
+    document.addEventListener('click', this.clickOutSide);
+  }
+
+  bindEvents() {
+    this.openButton = this.openButton.bind(this);
+    this.closeButton = this.closeButton.bind(this);
+    this.clickOutSide = this.clickOutSide.bind(this);
+  }
+ 
   init() {
-    this.addEventsOnButtons();
+    this.addEvents();
     return this;
   }
 }

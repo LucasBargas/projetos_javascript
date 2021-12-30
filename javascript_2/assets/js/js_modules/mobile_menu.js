@@ -12,9 +12,7 @@ export default class MobileMenu {
 
   clickOutSide(e) {
     const el = e.target;
-    if (el.classList.contains(this.class)) {
-      this.closeButton(e);
-    }
+    if (el.classList.contains(this.class)) this.closeButton(e);
   }
 
   closeButton(e) {
@@ -30,14 +28,10 @@ export default class MobileMenu {
   addEvents() {
     this.events.forEach(userEvent => {
       this.mobileOpen.addEventListener(userEvent, this.openButton);
-
       this.mobileClose.addEventListener(userEvent, this.closeButton);
     })
 
-    this.navLink.forEach(link => {
-      link.addEventListener('click', this.closeButton);
-    })
-
+    this.navLink.forEach(link => link.addEventListener('click', this.closeButton));
     document.addEventListener('click', this.clickOutSide);
   }
 
