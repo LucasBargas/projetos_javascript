@@ -231,6 +231,7 @@ body {
   max-width: 40%;
   height: auto;
   filter: grayscale(100);
+  transition: all .4s ease-in-out;
 }
 
 .aboutArea {
