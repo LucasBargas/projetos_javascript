@@ -1061,7 +1061,7 @@ body {
 }
 
 .formMessage {
-  display: block;
+  display: none;
   animation: showAlert 1s forwards;
   grid-column: 1/3;
 }
