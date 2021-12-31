@@ -194,6 +194,11 @@
   .team .default-title, .team-content {
     width: 100%;
   }
+
+  .finalContent-area {
+    grid-template-columns: 50% 50%;
+    gap: 40px 0;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -268,6 +273,14 @@
 
   .formMessage-area p {
     max-width: 70%;
+  }
+
+  .finalContent-area {
+    grid-template-columns: 1fr;
+  }
+
+  .finalContent-area a {
+    display: block;
   }
 }
 
@@ -398,6 +411,17 @@
 
   .testimonials-info span {
     font-size: 0.8125rem;
+  }
+
+  .finalContent-area-single:last-of-type form {
+    display: block;
+  }
+
+  .finalContent-area-single:last-of-type form .btn {
+    margin-top: 10px;
+    position: static;
+    display: block;
+    width: 100%;
   }
 }
 
