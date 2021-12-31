@@ -50,7 +50,7 @@
     gap: 40px;
   }
   
-  .default-title, .contact-content {
+  .contact .default-title, .contact-content {
     width: 100%;
   }
 }
