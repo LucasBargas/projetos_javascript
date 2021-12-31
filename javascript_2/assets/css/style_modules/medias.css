@@ -158,6 +158,19 @@
   .portfolio-content {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .testimonials-area {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .testimonials-area .default-title, .testimonials-content {
+    width: 100%;
+  }
+
+  .testimonials-slide-single {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -278,6 +291,23 @@
   .services-list ul li .services-img {
     width: 54px;
     height: 54px;
+  }
+
+  .testimonials-info p {
+    font-size: 0.875rem;
+  }
+  
+  .testimonials-info figure img {
+    width: 75px;
+    height: 75px;
+  }  
+
+  .testimonials-info h3 {
+    font-size: 1rem;
+  }
+
+  .testimonials-info span {
+    font-size: 0.8125rem;
   }
 }
 

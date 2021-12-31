@@ -530,11 +530,11 @@ body {
 }
 
 .services-area .default-title {
-  width: 40%;
+  width: 35%;
 }
 
 .services-list {
-  width: 60%;
+  width: 65%;
 }
 
 .services-list ul {
@@ -668,7 +668,6 @@ body {
   transition: .4s;
 }
 
-
 .portifolio-item figure::before {
   content: "";
   background: rgba(54, 52, 58, 0.6);
@@ -736,4 +735,108 @@ body {
   height: 28px;
   color: var(--white-color);
   font-weight: 700;
+}
+
+.testimonials {
+  background: var(--bg-alternative);
+}
+
+.testimonials-area {
+  display: flex;
+  gap: 20px;
+}
+
+.testimonials-area .default-title {
+  width: 35%;
+}
+
+.testimonials-content {
+  width: 65%;
+}
+
+.testimonials-slide-single {
+  padding: 0 25px;
+}
+
+.testimonials-info {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  background: var(--white-color);
+  padding: 30px;
+  text-align: center;
+}
+
+.testimonials-info p {
+  font-style: italic;
+}
+
+.testimonials-info p::before {
+  content: '';
+  display: inline-block;
+  background-image: url('../../images/icons/quote.svg');
+  background-position: center;
+  background-size: 100% 100%;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+
+.testimonials-info p::after {
+  content: '';
+  display: inline-block;
+  background-image: url('../../images/icons/quote.svg');
+  background-position: center;
+  background-size: 100% 100%;
+  width: 26px;
+  height: 26px;
+  transform: rotate(180deg);
+  position: relative;
+  top: 3px;
+  margin-left: 5px;
+}
+
+.testimonials-info figure {
+  padding: 20px 0 15px 0;
+}
+
+.testimonials-info figure img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.testimonials-info h3 {
+  font-size: 1.125rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.testimonials-info span {
+  font-size: 0.875rem;
+  color: var(--font-alternative);
+  font-family: 'Raleway', sans-serif;
+}
+
+.slick-dots {
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.slick-dots li.slick-active button {
+  background: var(--green-color);
+}
+
+.slick-dots li button {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+  border: 0;
+  transition: .3s;
+  text-indent: -3000px;
+  border: 1px solid var(--green-color);
 }

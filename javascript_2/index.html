@@ -504,6 +504,85 @@
     </div><!--portfolio-area-->
   </section><!--portfolio-->
 
+  <section class="testimonials default-section">
+    <div class="testimonials-area container space">
+
+      <div class="default-title">
+        <h2>Testimonials</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="testimonials-content">
+        <ul class="testimonials-slide">
+          <li class="testimonials-slide-single">
+            <div class="testimonials-info">
+              <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+
+              <figure>
+                <img src="assets/images/testimonials/testimonials-1.jpg" alt="">
+              </figure>
+
+              <h3>Saul Goodman</h2>
+              <span>Ceo & Founder</span>
+            </div>
+          </li>
+
+          <li class="testimonials-slide-single">
+            <div class="testimonials-info">
+              <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+
+              <figure>
+                <img src="assets/images/testimonials/testimonials-2.jpg" alt="">
+              </figure>
+
+              <h3>Sara Wilsson</h2>
+              <span>Designer</span>
+            </div>
+          </li>
+
+          <li class="testimonials-slide-single">
+            <div class="testimonials-info">
+              <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+
+              <figure>
+                <img src="assets/images/testimonials/testimonials-3.jpg" alt="">
+              </figure>
+
+              <h3>Jena Karlis</h2>
+              <span>Store Owner</span>
+            </div>
+          </li>
+
+          <li class="testimonials-slide-single">
+            <div class="testimonials-info">
+              <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+
+              <figure>
+                <img src="assets/images/testimonials/testimonials-4.jpg" alt="">
+              </figure>
+
+              <h3>Matt Brandon</h2>
+              <span>Freelancer</span>
+            </div>
+          </li>
+
+          <li class="testimonials-slide-single">
+            <div class="testimonials-info">
+              <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+
+              <figure>
+                <img src="assets/images/testimonials/testimonials-5.jpg" alt="">
+              </figure>
+
+              <h3>John Larson</h2>
+              <span>Entrepreneur</span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div><!--testimonials-area-->
+  </section><!--testimonials-->
+
 
   <div class="return jsReturn">
     <span></span>
@@ -512,7 +591,28 @@
   <!--slick-->
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    $('.testimonials-slide').slick({
+      dots: true,
+      infinite: true,
+      arrows: false,
+      speed: 600,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      swipe: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      responsive: [
+        {
+          breakpoint: 1100,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  </script>
 
   <!--modules-script-->
   <script type="module" src="assets/js/script.js"></script>
