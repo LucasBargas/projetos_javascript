@@ -3,6 +3,7 @@ import MobileMenu from "./js_modules/mobile_menu.js";
 import ReturnScroll from "./js_modules/return_scroll.js";
 import SmoothScroll from "./js_modules/smooth_scroll.js";
 import AnimateNumbers from "./js_modules/animate_numbers.js";
+import PortfolioFilter from "./js_modules/portfolio_filter.js";
 
 const headerFixed = new HeaderFixed();
 headerFixed.init();
@@ -18,3 +19,6 @@ smoothScroll.init();
 
 const animateNumbers = new AnimateNumbers();
 animateNumbers.init();
+
+const portfolioFilter = new PortfolioFilter();
+portfolioFilter.init();

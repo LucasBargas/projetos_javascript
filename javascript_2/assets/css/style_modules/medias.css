@@ -154,6 +154,10 @@
   .services-area .default-title, .services-list  {
     width: 100%;
   }
+  
+  .portfolio-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -181,6 +185,10 @@
   }
 
   .services-list ul {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-content {
     grid-template-columns: 1fr;
   }
 }
