@@ -1,0 +1,103 @@
+.modal {
+    position: fixed;
+    background: rgba(0, 153, 112,.95);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.jsModal.active {
+    display: flex;
+}
+
+.modal-area {
+    width: 600px;
+    height: auto;
+    background: var(--white-color);
+    border-radius: 10px;
+    animation: modalAnimation 0.6s forwards;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes modalAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-button {
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    align-self: flex-end;
+    color: var(--font-alternative);
+    padding: 10px 15px;
+    margin: 4px;
+}
+
+.modal-area-content {
+    padding: 15px 15px 0 15px;
+}
+
+.modal-area-content h2 {
+    color: var(--font-alternative);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.modal-area-content p {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.modal-area-content span, .modal-area-content a {
+    color: #000000;
+    font-weight: 700;
+}
+
+.button-repo{
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
+.button-repo a {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--green-color);
+}
+
+.button-repo a:hover {
+    text-decoration: underline;
+}
+
+.close-button-two {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.modal-button {
+    background: var(--green-color);
+    color: var(--white-color);
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-align: center;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.6s;
+}

@@ -1,0 +1,152 @@
+.jsAnimaScroll {
+  opacity: 0;
+}
+
+.aboutArea-left.animate, 
+.whyUs-text.animate,
+.services .default-title.animate,
+.testimonials .default-title.animate,
+.team .default-title.animate,
+.contact .default-title.animate {
+  animation: showLeft 1s forwards;
+}
+
+@keyframes showLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-80px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.aboutArea-right.animate, 
+.portfolio .default-title.animate {
+  animation: showRight 1s forwards;
+}
+
+@keyframes showRight {
+  from {
+    opacity: 0;
+    transform: translate3d(80px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.whyUs-list ul li:nth-of-type(1).animate,
+.services-list li:nth-of-type(1).animate,
+.team-content li:nth-of-type(1).animate {
+  animation: expandsOne 1.2s forwards;
+}
+
+@keyframes expandsOne {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0);
+  }
+}
+
+.whyUs-list ul li:nth-of-type(2).animate,
+.services-list li:nth-of-type(2).animate,
+.team-content li:nth-of-type(2).animate  {
+  animation: expandsTwo 1.2s forwards;
+}
+
+@keyframes expandsTwo {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0);
+  }
+}
+
+.whyUs-list ul li:nth-of-type(3).animate,
+.cta-area.animate,
+.services-list li:nth-of-type(3).animate,
+.team-content li:nth-of-type(3).animate  {
+  animation: expandsThree 1.2s forwards;
+}
+
+@keyframes expandsThree {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0);
+  }
+}
+
+.services-list li:nth-of-type(4).animate,
+.team-content li:nth-of-type(4).animate  {
+  animation: expandsFour 1.2s forwards;
+}
+
+@keyframes expandsFour {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0);
+  }
+}
+
+.portfolio-nav ul.animate,
+.portfolio-content.animate {
+  animation: downUpOne 1s forwards;
+}
+
+@keyframes downUpOne {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.testimonials-slide.animate,
+.contact-content.animate {
+  animation: downUpTwo 1.2s forwards;
+}
+
+@keyframes downUpTwo {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.countsArea.animate {
+  animation: show 1s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
