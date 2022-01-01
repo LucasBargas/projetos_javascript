@@ -282,6 +282,21 @@
   .finalContent-area a {
     display: block;
   }
+
+  .finalContent-copy-area {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .modal-area{
+    width: 90% !important;
+  }
+
+  .modal-area-content p{
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -325,6 +340,14 @@
     height: 35px;
     bottom: 12px;
     right: 10px;
+  }
+
+  .modal-area-content h2{
+    font-size: 1.25rem;
+  }
+
+  .modal-area-content p, .modal-button{
+    font-size: 0.88rem;
   }
 }
 
@@ -491,6 +514,12 @@
   .team-content-medias a svg {
     width: 12px;
     height: 12px;
+  }
+
+  .finalContent-copy-medias {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 }
 

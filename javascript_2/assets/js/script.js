@@ -6,6 +6,7 @@ import AnimateNumbers from "./js_modules/animate_numbers.js";
 import PortfolioFilter from "./js_modules/portfolio_filter.js";
 import FormMessage from "./js_modules/form_message.js";
 import ScrollAnimation from "./js_modules/scroll_animation.js";
+import Modal from "./js_modules/intro_modal.js";
 
 const headerFixed = new HeaderFixed();
 headerFixed.init();
@@ -30,3 +31,6 @@ formMessage.init();
 
 const scrollAnimation = new ScrollAnimation();
 scrollAnimation.init();
+
+const modal = new Modal();
+modal.init();
