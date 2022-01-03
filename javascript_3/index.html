@@ -29,13 +29,70 @@
   <header class="header space">
     <div class="headerArea container">
       <div class="headerNav">
-        <div class="headerNav-left" style="background: green;">
+        <div class="headerNav-left">
+          <div class="headerNav-brand">
+            <a href="index.html">
+              <span></span>
+            </a>
+          </div>
+
+          <div class="categories-area">
+            <ul class="categorias-main">
+              <li class="categories"><a href="#">
+                <i class="fas fa-bars" id="mobile"></i>
+                <span>Categories</span>
+                <i class="fas fa-sort-down" id="arrow-down"></i>
+              </a></li>
+
+            </ul><!--categorias-main-->
+          </div><!--categories-area-->
+
+          <div class="menu-area">
+            <ul class="menu-main">
+              <li class="menu">
+                <a href="#">Menu</a>
+              </li>
+
+              <ul class="menu-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </ul>
+          </div>
 
         </div><!--headerNav-left-->
 
-        <div class="headerNav-right" style="background: yellow;"></div>
+        <div class="headerNav-right">
+          <ul>
+            <li class="search jsSearch">
+              <i class="bi bi-search" id="search"></i>
+            </li>
 
-        <div class="headerNav-search">
+            <li class="wishlist">
+              <i class="bi bi-heart" id="wishlist"></i>
+            </li>
+
+            <li class="account">
+              <i class="bi bi-person" id="account"></i>
+            </li>
+
+            <li class="cart">
+              <i class="bi bi-cart" id="cart"></i>
+
+              <ul class="cart-submenu">
+                <div class="cart-submenu-area">
+                  <i class="bi bi-cart-x"></i>
+                  <p>No products in the cart.</p>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div><!--headerNav-right-->
+
+        <div class="headerNav-search jsHeaderNavSearch">
           <form>
             <input type="search" placeholder="Search for products">
             <button><span></span></button>
