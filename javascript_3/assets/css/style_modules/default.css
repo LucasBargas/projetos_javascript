@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  :root {
+    --white-color: #ffffff;
+    --blue-color: #676cd2;
+    --red-color: #fe6a6a;
+    --font-color: #4b566b;
+    --carousel-dots: #b6bcc5;
+    --price-bg: #ededf9;
+  }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
