@@ -6,20 +6,26 @@
     text-decoration: none;
   }
   
-  body {
-    font-family: 'Rubik', sans-serif;
+:root {
+  --white-color: #ffffff;
+  --blue-color: #676cd2;
+  --red-color: #fe6a6a;
+  --font-color: #4b566b;
+  --carousel-dots: #b6bcc5;
+  --price-bg: #ededf9;
   }
-  
-  :root {
-    --white-color: #ffffff;
-    --blue-color: #676cd2;
-    --red-color: #fe6a6a;
-    --font-color: #4b566b;
-    --carousel-dots: #b6bcc5;
-    --price-bg: #ededf9;
-  }
-  
-  .container {
-    width: 100%;
-    margin: 0 auto;
-  }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: var(--white-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.space {
+  padding: 0 4%;
+}
