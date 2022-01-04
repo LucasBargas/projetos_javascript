@@ -3,11 +3,11 @@
   justify-content: space-between;
 } */
 .header {
-  background: #ccc;
+  background: var(--white-color);
 }
 
 .header.space {
-  padding: 7px 4%;
+  padding: 0 4%;
 }
 
 .headerNav-mobile {
