@@ -1,0 +1,6 @@
+.initial-bg {
+    background-image: url('../../images/bg_home.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 715px;
+}
