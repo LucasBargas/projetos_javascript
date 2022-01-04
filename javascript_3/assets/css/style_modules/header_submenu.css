@@ -1,0 +1,118 @@
+/* Submenu Categories */
+.ctg-main {
+  display: inline-block;
+  position: relative;
+}
+
+.ctg-main:hover .submenu-ctg {
+  opacity: 1;
+  visibility: visible;
+  animation: downUp .4s forwards;
+}
+
+@keyframes downUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.submenu-ctg {
+  position: absolute;
+  top: 46px;
+  background: var(--white-color);
+  box-shadow: 0px 1px 12px rgb(0, 0, 0, .1);
+  border-radius: 5px;
+  width: 15vw;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu-ctg a {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--font-color);
+  transition: .3s;
+  position: relative;
+}
+
+.submenu-ctg .ctg-submenu-link {
+  padding: 14px 16px;
+}
+
+.submenu-ctg .ctg-submenu-link:hover {
+  color: var(--red-color);
+}
+
+.submenu-ctg li:not(:last-of-type) .ctg-submenu-link {
+  border-bottom: 1px solid #dae1e7;
+}
+
+.submenu-ctg .ctg-submenu-link::after {
+  content: '▶';
+  font-size: 0.5rem;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.submenu-ctg-main {
+  position: relative;
+}
+
+.ctg-second-submenu {
+  position: absolute;
+  top: 0;
+  background: var(--white-color);
+  box-shadow: 0px 1px 12px rgb(0, 0, 0, .1);
+  border-radius: 5px;
+  width: 15vw;
+  z-index: 3;
+}
+
+.ctg-second-submenu li:last-of-type {
+  padding-bottom: 10px;
+}
+
+.ctg-second-submenu li:first-of-type a {
+  padding: 14px 16px;
+  border-bottom: 1px solid #dae1e7;
+  font-weight: 700;
+  position: relative;
+}
+
+.ctg-second-submenu li:not(:first-of-type) a {
+  padding: 10px 16px;
+}
+
+.ctg-second-submenu li:first-of-type a::after {
+  content: '﹥';
+  font-weight: 700;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 50%;
+  margin-left: 5px;
+  transform: translate3d(0, -50%, 0);
+}
+
+.ctg-second-submenu li:not(:first-of-type) a:hover {
+  color: var(--red-color);
+}
+
+.ctg-second-submenu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu-ctg-main:hover .ctg-second-submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Submenu Menu */

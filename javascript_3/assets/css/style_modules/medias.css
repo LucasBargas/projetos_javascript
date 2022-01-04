@@ -1,5 +1,27 @@
+@media screen and (max-width: 1536px) {
+  .ctg-second-submenu {
+    right: -225px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ctg-second-submenu {
+    right: -212px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .ctg-second-submenu {
+    right: -200px;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .container {
-		max-width: 1200px;
+		max-width: 1180px;
 	}
+
+  .ctg-second-submenu {
+    right: -190px;
+  }
 }
