@@ -116,3 +116,121 @@
 }
 
 /* Submenu Menu */
+.menu-nav-main {
+  position: relative;
+}
+
+.menu-submenu {
+  display: block;
+  position: absolute;
+  top: 31px;
+  background: var(--white-color);
+  box-shadow: 0px 1px 12px rgb(0, 0, 0, .1);
+  border-radius: 5px;
+}
+
+.home-submenu {
+  width: 16vw;
+}
+
+.menu-submenu a {
+  display: block;
+}
+
+.menu-submenu a {
+  font-size: 0.875rem;
+  color: var(--font-color);
+  transition: .3s;
+}
+
+.menu-submenu a p {
+  font-size: 0.625em;
+  color: var(--font-color);
+  font-weight: 300;
+  margin-top: 3px;
+}
+
+.menu-submenu a:hover {
+  color: var(--red-color);
+}
+
+.menu-submenu > li a {
+  padding: 10px 16px;
+}
+
+.home-submenu > li:not(:last-of-type) {
+  border-bottom: 1px solid #dae1e7;
+}
+
+.menu-second-submenu {
+  position: relative;
+}
+
+.menu-second-submenu ul {
+  position: absolute;
+  background: var(--white-color);
+  box-shadow: 0px 1px 12px rgb(0, 0, 0, .1);
+  border-radius: 5px;
+  z-index: 4;
+}
+
+.menu-second-submenu ul img {
+  width: 185px;
+}
+
+.menu-second-submenu ul {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-second-submenu:hover ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-second-submenu:nth-of-type(4) a {
+  color: var(--red-color);
+}
+
+.v1-second-submenu {
+  top: 0;
+}
+
+.v2-second-submenu {
+  top: -55px;
+}
+
+.eletronics-second-submenu {
+  top: -110px;
+}
+
+.market-second-submenu {
+  top: -165px;
+}
+
+.grocery-second-submenu {
+  top: -220px;
+}
+
+.menu-main .menu-submenu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-main:hover .menu-submenu {
+  opacity: 1;
+  visibility: visible;
+  animation: downUp .4s forwards;
+}
+
+.shop-submenu, .pages-submenu {
+  width: 12vw;
+}
+
+.account-submenu {
+  width: 14vw;
+}
+
+.blog-submenu {
+  width: 11vw;
+}

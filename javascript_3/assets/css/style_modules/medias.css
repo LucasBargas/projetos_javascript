@@ -2,17 +2,45 @@
   .ctg-second-submenu {
     right: -225px;
   }
+
+  .menu-second-submenu ul {
+    left: 238px;
+  }
+
+  .v2-second-submenu {
+    top: -50px;
+  }
+  
+  .eletronics-second-submenu {
+    top: -100px;
+  }
+  
+  .market-second-submenu {
+    top: -152px;
+  }
+  
+  .grocery-second-submenu {
+    top: -202px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
   .ctg-second-submenu {
     right: -212px;
   }
+
+  .menu-second-submenu ul {
+    left: 225px;
+  }
 }
 
 @media screen and (max-width: 1366px) {
   .ctg-second-submenu {
     right: -200px;
+  }
+
+  .menu-second-submenu ul {
+    left: 214px;
   }
 }
 
@@ -23,5 +51,9 @@
 
   .ctg-second-submenu {
     right: -190px;
+  }
+
+  .menu-second-submenu ul {
+    left: 200px;
   }
 }
