@@ -209,3 +209,8 @@
   font-family: 'Rubik', sans-serif;
   padding: 0 55px 0 10px;
 }
+
+.headerArea-search form input::placeholder {
+  color: #7d879c;
+  font-weight: 400;
+}
