@@ -7,17 +7,13 @@
 }
 
 .header.space {
-  padding: 5px 4%;
+  padding: 14px 4% 0 4%;
 }
 
 .headerArea-nav {
   display: grid;
   grid-template-columns: 15% 15% 50% 20%;
   align-items: center;
-}
-
-.headerArea-search {
-  grid-column: 1/5;
 }
 
 .headerArea-brand a {
@@ -93,4 +89,123 @@
 
 .headerArea-nav-side ul li:first-of-type .menu-main-link {
   color: var(--red-color);
+}
+
+.headerArea-nav-right ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+}
+
+.headerArea-nav-right ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--font-color);
+  height: 44px;
+  width: 44px;
+  position: relative;
+}
+
+.headerArea-nav-right ul li:last-of-type {
+  background: #f3f5f9;
+  border-radius: 50%;
+}
+
+.headerArea-nav-right ul li:last-of-type::before {
+  content: '0';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -4px;
+  right: 0;
+  font-size: 0.625rem;
+  font-weight: 500;
+  background: var(--red-color);
+  color: var(--white-color);
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+}
+
+.headerArea-nav-right ul li:not(:last-of-type)::before {
+  font-size: 0.625rem;
+  font-weight: 500;
+  background: var(--font-color);
+  color: var(--white-color);
+  position: absolute;
+  top: -11px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.headerArea-nav-right ul li:not(:last-of-type):hover::before {
+  opacity: 1;
+  visibility: visible;
+  animation: downUp .3s forwards;
+}
+
+.headerArea-nav-right ul li:nth-of-type(1)::before {
+  content: 'Search';
+}
+
+.headerArea-nav-right ul li:nth-of-type(2)::before {
+  content: 'Wishlist';
+}
+
+.headerArea-nav-right ul li:nth-of-type(3)::before {
+  content: 'Account';
+}
+
+.headerArea-search {
+  padding-top: 15px;
+}
+
+.headerArea-search form {
+  height: 0;
+  overflow-y: hidden;
+  visibility: hidden;
+  transition: .3s;
+  position: relative;
+  font-family: 'Rubik', sans-serif;
+  z-index: 1;
+}
+
+.headerArea-search form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  height: 40px;
+  width: 50px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background: transparent;
+  color: var(--font-color);
+}
+
+.headerArea-search.show form {
+  height: 65px;
+  visibility: visible;
+}
+
+.headerArea-search form input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  outline: 0;
+  color: var(--font-color);
+  background: #fff;
+  border: 1px solid #dae1e7;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  border-radius: 0.3125rem;
+  box-shadow: 0, 0, 0, 0, transparent;
+  font-family: 'Rubik', sans-serif;
+  padding: 0 55px 0 10px;
 }

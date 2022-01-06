@@ -29,3 +29,7 @@ body {
 .space {
   padding: 0 4%;
 }
+
+.menu-aside {
+  display: none;
+}

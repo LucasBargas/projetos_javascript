@@ -118,6 +118,7 @@
 /* Submenu Menu */
 .menu-nav-main {
   position: relative;
+  z-index: 4;
 }
 
 .menu-submenu {
@@ -164,6 +165,7 @@
 
 .menu-second-submenu {
   position: relative;
+  z-index: 5;
 }
 
 .menu-second-submenu ul {
@@ -171,7 +173,6 @@
   background: var(--white-color);
   box-shadow: 0px 1px 12px rgb(0, 0, 0, .1);
   border-radius: 5px;
-  z-index: 4;
 }
 
 .menu-second-submenu ul img {
@@ -233,4 +234,42 @@
 
 .blog-submenu {
   width: 11vw;
+}
+
+/* Cart Submenu */
+.cart-submenu {
+  position: absolute;
+  bottom: -102px;
+  right: 0;
+  width: 20vw;
+  padding-top: 10px;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.headerArea-nav-right ul li:nth-of-type(4):hover .cart-submenu {
+  opacity: 1;
+  visibility: visible;
+  animation: downUp .3s forwards;
+}
+
+.cart-submenu div {
+  background: var(--white-color);
+  box-shadow: 0px 1px 12px rgb(0, 0, 0, .1);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.cart-submenu div i {
+  font-size: 2rem;
+  color: #dae1e7
+}
+
+.cart-submenu div p {
+  margin-top: 5px;
+  color: #7d879c;
 }

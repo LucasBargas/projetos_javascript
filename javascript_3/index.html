@@ -264,13 +264,54 @@
           </ul>
         </div>
 
-        <div class="headerArea-nav-right" style="background: pink;">O</div>
-        <div class="headerArea-search" style="background: blue;">O</div>
-      </div><!--header-nav-->
+        <div class="headerArea-nav-right">
+          <ul>
+            <li class="jsSearch"><i class="bi bi-search"></i></li>
+            <li><i class="bi bi-suit-heart"></i></li>
+            <li><i class="bi bi-person"></i></li>
 
-      <div class="headerArea-mobile-nav"><p>Olá, teste!</p></div>
+            <li>
+              <i class="bi bi-cart3"></i>
+
+              <ul class="cart-submenu">
+                <div>
+                  <i class="bi bi-cart-x"></i>
+                  <p>No products in the cart.</p>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div><!--headerArea-nav-->
+
+      <div class="headerArea-search jsHeaderNavSearch">
+        <form>
+          <input type="search" placeholder="Search for products">
+          <button><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+
+      <div class="headerArea-mobile-nav">
+        <div class="mobileNav-brand">
+          <a href="index.html"></a>
+        </div>
+
+        <div class="mobileNav-right">
+          <ul>
+            <li class="jsMobile"><i class="fas fa-bars"></i></li>
+            <li><i class="bi bi-person"></i></li>
+            <li><i class="bi bi-cart3"></i></li>
+          </ul>
+        </div>
+      </div>
     </div><!--headerArea-->
   </header><!--header-->
+
+  <aside class="menu-aside jsMenuAside">
+    <p>Olá</p>
+  </aside>
+
+  <section class="initial-bg"></section>
 
   <!--modules-script-->
   <script type="module" src="assets/js/script.js"></script>
