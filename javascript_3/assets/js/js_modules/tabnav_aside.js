@@ -2,7 +2,7 @@ export default class TabNavAside {
   constructor() {
     this.asideButton = document.querySelectorAll('.jsAsideBtn');
 
-    this.asideButtonSelect = document.querySelector('.jsAsideMenuButton');
+    this.asideButtonSelect = document.querySelector('.jsAsideMenuButton button');
 
     this.events = ['click', 'touchstart'];
     this.class = 'active';

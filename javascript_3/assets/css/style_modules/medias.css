@@ -526,6 +526,10 @@
   }
 
   .aside-menu-button button {
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
     text-align: center;
     background: var(--white-color);
@@ -535,13 +539,15 @@
     cursor: pointer;
     transition: .3s;
   }
+  
+  .aside-menu-button button i {
+    font-size: 0.6875rem;
+    position: relative;
+    top: -1px;
+  }
 
   .aside-menu-button button.active {
     background: #dae1e7;
-  }
-
-  .aside-menu-button button span {
-    color: var(--font-color);
   }
 
   .aside-menu-select {
