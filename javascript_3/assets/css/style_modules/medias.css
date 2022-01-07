@@ -146,10 +146,10 @@
   .menu-aside.showMenu {
     transform: translate3d(0, 0, 0);
     box-shadow: 15px 0px 50px rgb(0, 0, 0, .1);
+    transition: .4s;
   }
 
   .menu-aside.showMenu .menu-aside-top {
-    width: 100%;
     transform: translate3d(0, 0, 0);
   }
 
@@ -157,6 +157,7 @@
     position: fixed;
     top: 0;
     z-index: 998;
+    width: 100%;
     transform: translate3d(-100%, 0, 0);
     display: flex;
     justify-content: space-between;
@@ -165,7 +166,6 @@
     padding: 10px 25px;
     box-shadow: 0px 4px 11px 1px rgb(0, 0, 0, .1);
     background: var(--white-color);
-    transition: .2s;
   }
 
   .menu-aside-top h3 {
