@@ -30,6 +30,16 @@ body {
   padding: 0 4%;
 }
 
+.default-title h2 {
+  color: var(--font-color);
+  font-size: 1.75rem;
+}
+
+.default-title p {
+  color: #7f8c9e;
+  font-size: 1rem;
+}
+
 .menu-aside {
   display: none;
 }

@@ -22,6 +22,10 @@
   .grocery-second-submenu {
     top: -202px;
   }
+
+  .initial-bg {
+    height: 715px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -41,10 +45,6 @@
 
   .menu-second-submenu ul {
     left: 214px;
-  }
-
-  .initial-bg {
-    height: calc(100vh - 80px);
   }
 }
 
@@ -585,6 +585,14 @@
     font-size: 0.875rem;
     color: var(--font-color);
   }
+
+  .products-slider li {
+    width: calc(100% / 2);
+  }
+
+  .main-products-control li:nth-of-type(5) {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -622,7 +630,6 @@
 
   .initial-bg-content form input {
     width: 100%;
-
     padding-left: 50px;
     padding-right: 150px;
   }
@@ -635,6 +642,14 @@
     height: 51px;
     position: absolute;
     right: 0;
+  }
+
+  .products-slider li {
+    width: 100%;
+  }
+
+  .main-products-control li:nth-of-type(6) {
+    display: block;
   }
 }
 
