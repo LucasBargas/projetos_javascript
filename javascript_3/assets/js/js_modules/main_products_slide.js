@@ -1,10 +1,12 @@
+import debounce from './debounce.js';
+
 export default class MainProductsSlide {
   constructor() {
     this.slider = document.querySelector('.jsProductsSlider');
     this.sliderControl = document.querySelectorAll('.jsMainSliderControl li');
 
     this.events = ['touchstart', 'click'];
-    this.onResize = this.onResize.bind(this);
+    this.onResize = debounce(this.onResize.bind(this), 200);
   }
 
   activeControl(e) {
@@ -26,9 +28,16 @@ export default class MainProductsSlide {
     console.log(this.slideArray)
   }
 
+  slidesIndexNav(index) {
+    this.index = {
+      active: index,
+    }
+  }
+
   changeSlide(index) {
     const activeSlide = this.slideArray[index];
     this.moveSlide(activeSlide.position);
+    this.slidesIndexNav(index);
   }
 
   eventControl() {
@@ -46,6 +55,7 @@ export default class MainProductsSlide {
   onResize() {
     setTimeout(() => {
       this.slideConfig();
+      this.changeSlide(this.index.active);
     }, 1000)
   }
 
