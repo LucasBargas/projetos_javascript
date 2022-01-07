@@ -693,6 +693,11 @@
   .initial-bg {
     height: calc(100vh - 46px);
   }
+
+  .initial-bg-content form input,
+  .initial-bg-content .btn-bg {
+    height: 40px;
+  }
 }
 
 @media screen and (max-width: 300px) {
