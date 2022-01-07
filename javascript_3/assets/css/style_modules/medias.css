@@ -496,6 +496,18 @@
     border-bottom: 1px solid #dae1e7;
     padding: 25px 0 15px 0;
     font-size: 0.9375rem;
+    position: relative;
+  }
+
+  .aside-menu-ctg li:first-of-type a::after {
+    content: '﹥';
+    color: var(--font-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 12px;
+    margin-left: 3px;
+    font-weight: 300;
   }
 
   .aside-menu-ctg li a {
