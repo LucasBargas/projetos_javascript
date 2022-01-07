@@ -519,6 +519,66 @@
   .aside-menu-ctg li:not(:first-of-type) a {
     padding: 5px 0;
   }
+
+  .aside-menu-button {
+    padding-top: 25px;
+    width: 100%;
+  }
+
+  .aside-menu-button button {
+    width: 100%;
+    text-align: center;
+    background: var(--white-color);
+    border: 1px solid #dae1e7;
+    padding: 8px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .aside-menu-button button.active {
+    background: #dae1e7;
+  }
+
+  .aside-menu-button button span {
+    color: var(--font-color);
+  }
+
+  .aside-menu-select {
+    display: none;
+    padding: 20px;
+    box-shadow: 0px 5px 8px rgb(0, 0, 0, .1);
+  }
+
+  .aside-menu-select.active {
+    display: block;
+    animation: select .3s forwards;
+  }
+
+  @keyframes select {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .aside-menu-select select {
+    width: 100%;
+    background: var(--white-color);
+    border: 1px solid #dae1e7;
+    padding: 8px 6px;
+    border-radius: 3px;
+    color: var(--font-color);
+    font-family: 'Rubik', sans-serif;
+  }
+
+  .aside-menu-select p {
+    margin-top: 15px;
+    font-size: 0.875rem;
+    color: var(--font-color);
+  }
 }
 
 @media screen and (max-width: 800px) {
