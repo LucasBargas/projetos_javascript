@@ -600,6 +600,11 @@
     position: static;
     margin-top: 0;
   }
+
+  .product-card .product-card-img::after,
+  .product-card .product-visualization {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
