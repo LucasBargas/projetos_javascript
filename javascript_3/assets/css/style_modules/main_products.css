@@ -179,6 +179,8 @@
 .product-access .product-access-top {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
   align-items: center;
 }
 
@@ -251,4 +253,55 @@
 
 .product-access-down .price span {
   font-size: 0.75rem;
+}
+
+/* Products Showcase */
+.products-showcase.space {
+  padding: 490px 4% 55px 4%;
+}
+
+.products-showcase-area .default-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #e3e9ef;
+}
+
+.section-button {
+  display: inline-block;
+  border: 1px solid #4e54c8;
+  color: #4e54c8;
+  padding: 6px 35px 6px 18px;
+  border-radius: 3px;
+  transition: .3s;
+  position: relative;
+}
+
+.section-button:hover {
+  color: var(--white-color);
+  background: #4e54c8;
+}
+
+.section-button::after {
+  content: '>';
+  font-size: 1.25rem;
+  position: absolute;
+  top: 4px;
+  margin-left: 10px;
+}
+
+.products-showcase-content {
+  padding-top: 25px;
+}
+
+.products-showcase-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px;
+}
+
+.showcase-button-down {
+  padding-top: 50px;
+  text-align: center;
 }
