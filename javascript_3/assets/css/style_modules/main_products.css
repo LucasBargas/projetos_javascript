@@ -268,30 +268,6 @@
   border-bottom: 1px solid #e3e9ef;
 }
 
-.section-button {
-  display: inline-block;
-  border: 1px solid #4e54c8;
-  color: #4e54c8;
-  padding: 10px 35px 10px 18px;
-  border-radius: 3px;
-  transition: .3s;
-  position: relative;
-}
-
-.section-button:hover {
-  color: var(--white-color);
-  background: #4e54c8;
-}
-
-.section-button::after {
-  content: '>';
-  font-size: 1.25rem;
-  position: absolute;
-  top: 50%;
-  transform: translate3d(0, -50%, 0);
-  margin-left: 10px;
-}
-
 .products-showcase-content {
   padding-top: 40px;
 }
