@@ -586,12 +586,13 @@
     color: var(--font-color);
   }
 
-  .products-slider li {
-    width: calc(100% / 2);
+  .main-products.space {
+    padding: 30px 4% 45px 4%;
   }
-
-  .main-products-control li:nth-of-type(5) {
-    display: block;
+  
+  .main-products {
+    position: static;
+    margin-top: 0;
   }
 }
 
@@ -604,6 +605,14 @@
   .initial-bg-content {
     width: 80%;
     padding-top: 40px;
+  }
+
+  .products-slider li {
+    width: calc(100% / 2);
+  }
+
+  .main-products-control li:nth-of-type(5) {
+    display: block;
   }
 }
 
