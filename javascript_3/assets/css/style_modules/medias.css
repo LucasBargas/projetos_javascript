@@ -636,6 +636,16 @@
   .products-showcase-content {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .sellers-left {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sellers-content {
+    grid-template-columns: 100%;
+    gap: 40px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -696,6 +706,11 @@
   .product-card .product-card-img img {
     width: 100%;
     height: auto;
+  }
+
+  .selllers-product {
+    grid-template-columns: 100%;
+    gap: 40px;
   }
 }
 
