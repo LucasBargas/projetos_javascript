@@ -1,0 +1,236 @@
+.footer {
+  background: #373f50;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  padding: 40px 0;
+  color: var(--white-color);
+  gap: 25px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.footer-brand h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-left: 20px;
+}
+
+.footer-brand img {
+  width: 117px;
+}
+
+.footer-left p {
+  opacity: .7;
+  font-size: 0.875rem;
+}
+
+.footer-left-datas {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-left-datas p {
+  color: var(--white-color);
+  opacity: 1;
+  font-size: 1.0625rem;
+  padding: 4px 0;
+}
+
+.footer-left-datas p:nth-of-type(1) {
+  padding-right: 18px;
+}
+
+.footer-left-datas p:nth-of-type(2) {
+  border-left: 1px solid rgba(255,255,255, .08);
+  border-right: 1px solid rgba(255,255,255, .08);
+  padding: 0 18px;
+}
+
+.footer-left-datas p:nth-of-type(3) {
+  padding-left: 18px;
+}
+
+.footer-left-datas span {
+  color: var(--red-color);
+  font-weight: 500;
+}
+
+.footer-left-medias {
+  padding-top: 30px;
+}
+
+.footer-left-medias ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-left-medias li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255, .08);
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.footer-left-medias li a i {
+  color: var(--white-color);
+  font-size: 0.875rem;
+  transition: .4s;
+}
+
+.footer-left-medias li a:hover {
+  background: var(--white-color);
+}
+
+.footer-left-medias .tw a:hover i {
+  color: #15aac0;
+}
+
+.footer-left-medias .fb a:hover i,
+.footer-left-medias .insta a:hover i {
+  color: var(--font-color);
+}
+
+.footer-left-medias .pin a:hover i {
+  color: #e60024;
+}
+
+.footer-left-medias .yt a:hover i {
+  color: #fe0000;
+}
+
+.footer-categories h3,
+.footer-members h3 {
+  font-size: 1.0625rem;
+}
+
+.footer-categories ul,
+.footer-members ul {
+  padding-top: 18px;
+}
+
+.footer-categories ul li:not(:first-of-type),
+.footer-members ul li:not(:first-of-type) {
+  margin-top: 7px;
+}
+
+.footer-categories ul li a,
+.footer-members ul li a {
+  color: var(--white-color);
+  font-size: 0.875rem;
+  opacity: .6;
+  transition: .4s;
+}
+
+.footer-categories ul li a:hover,
+.footer-members ul li a:hover {
+  opacity: 1;
+}
+
+.footer-newsletter {
+  background: #2b3445;
+}
+
+.footer-newsletter.space {
+  padding: 44px 4% 30px 4%;
+}
+
+.footer-newsletter-area {
+  color: var(--white-color);
+  text-align: center;
+  padding-bottom: 38px;
+}
+
+.footer-newsletter-area h3 {
+  font-size: 1.0625rem;
+}
+
+.footer-newsletter-area form {
+  padding-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-newsletter-area form input {
+  border-radius: 5px;
+  height: 44px;
+  border: 0;
+  outline: 0;
+  width: 30%;
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  color: var(--font-color);
+  padding: 0 12px;
+}
+
+.footer-newsletter-area form button {
+  height: 44px;
+  border: 0;
+  outline: 0;
+  padding: 10px 22px;
+  background: var(--red-color);
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  right: 4px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.footer-newsletter-area form button:hover {
+  background: #f35252;
+}
+
+.footer-newsletter-area p {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 12px;
+}
+
+.footer-newsletter .footer-final {
+  border-top: 1px solid rgba(255,255,255, .08);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter .footer-final p {
+  color: var(--white-color);
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.footer-newsletter .footer-final ul {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-newsletter .footer-final ul li a {
+  font-size: 0.8125rem;
+  color: var(--white-color);
+  opacity: 0.6;
+  transition: .4s;
+}
+
+.footer-newsletter .footer-final ul li a:hover {
+  color: var(--white-color);
+  opacity: 1;
+}

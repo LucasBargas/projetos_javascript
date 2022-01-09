@@ -660,6 +660,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+
+  .footer-newsletter-area form input {
+    width: 50%;
+  }
+
+  .footer-newsletter .footer-final {
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -727,6 +736,34 @@
     grid-template-columns: 100%;
     gap: 40px;
   }
+
+  .footer-content {
+    grid-template-columns: 100%;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left-datas {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-left-medias ul {
+    gap: 8px;
+  }
+
+  .footer-categories,
+  .footer-members {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -756,6 +793,25 @@
   .initial-bg-content form {
     padding-top: 30px;
   }
+
+  .footer-newsletter-area form input {
+    width: 70%;
+    height: 38px;
+  }
+
+  .footer-newsletter-area form button {
+    height: 38px;
+  }
+
+  .footer-newsletter .footer-final {
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-newsletter .footer-final ul {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 @media screen and (max-width: 370px) {
@@ -773,6 +829,35 @@
     width: 100%;
     margin-top: 10px;
     border-radius: 5px;
+  }
+
+  .footer-brand {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .footer-brand h2 {
+    margin-left: 0;
+  }
+
+  .footer-left-datas {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-left-datas p:nth-of-type(1) {
+    padding-right: 0;
+  }
+  
+  .footer-left-datas p:nth-of-type(2) {
+    border-left: 0;
+    border-right: 0;
+    padding: 0;
+  }
+  
+  .footer-left-datas p:nth-of-type(3) {
+    padding-left: 0;
   }
 }
 
@@ -804,4 +889,18 @@
   .initial-bg-content p {
     font-size: 1rem;
   }
+
+  .footer-newsletter-area form,
+  .footer-newsletter-area form input,
+  .footer-newsletter-area form button {
+    display: block;
+    width: 100%;
+    position: static;
+    border-radius: 5px;
+  }
+
+  .footer-newsletter-area form button {
+    margin-top: 10px;
+  }
+
 }
