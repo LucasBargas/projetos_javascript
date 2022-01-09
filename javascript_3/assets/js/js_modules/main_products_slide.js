@@ -25,7 +25,6 @@ export default class MainProductsSlide {
       const position = -(element.offsetLeft);
       return { element, position };
     })
-    console.log(this.slideArray)
   }
 
   slidesIndexNav(index) {
