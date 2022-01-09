@@ -1,0 +1,45 @@
+.why-us {
+  background: #4e53c8;
+}
+
+.why-us.space {
+  padding: 48px 4%;
+}
+
+.why-us-area .default-title {
+  text-align: center;
+}
+
+.why-us-area .default-title h2 {
+  color: var(--white-color);
+}
+
+.why-us-content {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.why-us-content li > div {
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.why-us-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.why-us-content li h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.why-us-content li p {
+  margin-top: 7px;
+  font-size: 0.8125rem;
+  opacity: .8;
+}

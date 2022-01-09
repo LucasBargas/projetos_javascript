@@ -646,6 +646,15 @@
     grid-template-columns: 100%;
     gap: 40px;
   }
+
+  .why-us-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-us-content li {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -711,6 +720,10 @@
   .selllers-product {
     grid-template-columns: 100%;
     gap: 40px;
+  }
+
+  .why-us-content {
+    grid-template-columns: 100%;
   }
 }
 
