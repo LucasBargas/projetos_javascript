@@ -613,6 +613,103 @@
   .products-showcase-content {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .footer-content {
+    grid-template-columns: 100%;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left-datas {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-left-medias ul {
+    gap: 8px;
+  }
+
+  .footer-categories,
+  .footer-members {
+    display: none;
+  }
+
+  .footer-newsletter-area form input {
+    width: 50%;
+  }
+
+  .footer-newsletter .footer-final {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .return-to-top {
+    bottom: 72px;
+    background: rgba(43,52,69, .5);
+  }
+
+  .return-to-top::before {
+    display: none;
+  }
+
+  .section-nav-down {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--white-color);
+    z-index: 901;
+    transform: translate3d(0, 0, 0);
+    transition: .3s;
+  }
+
+  .section-nav-down.remove {
+    transform: translate3d(0, 100%, 0);
+    transition: .3s;
+  }
+
+  .section-nav-down ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    box-shadow: 0px -10px 15px rgb(0 0 0 / 10%);
+  }
+
+  .section-nav-down ul li {
+    text-align: center;
+    border-left: 1px solid #e3e9ef;
+    border-right: 1px solid #e3e9ef;
+  }
+
+  .section-nav-down ul a {
+    display: block;
+    padding: 9px 0;
+  }
+
+  .section-nav-down ul a span,
+  .section-nav-down ul a i {
+    display: block;
+  }
+
+  .section-nav-down ul a i {
+    font-size: 1.25rem;
+    color: var(--font-color);
+  }
+
+  .section-nav-down ul a span {
+    margin-top: 5px;
+    font-size: 0.6875rem;
+    color: #7d879c;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -660,20 +757,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-
-  .footer-newsletter-area form input {
-    width: 50%;
-  }
-
-  .footer-newsletter .footer-final {
-    justify-content: center;
-    gap: 10px;
-  }
 }
 
 @media screen and (max-width: 500px) {
   .menu-aside.showMenu {
-    width: 77%;
+    width: 100%;
     background-size: 60% 100%;
   }
 
@@ -737,32 +825,16 @@
     gap: 40px;
   }
 
-  .footer-content {
-    grid-template-columns: 100%;
+  .footer {
+    padding-bottom: 50px;
   }
 
-  .footer-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .modal-area{
+    width: 90% !important;
+  }
+
+  .modal-area-content p{
     text-align: center;
-  }
-
-  .footer-left-datas {
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .footer-left-medias ul {
-    gap: 8px;
-  }
-
-  .footer-categories,
-  .footer-members {
-    display: none;
   }
 }
 
@@ -771,10 +843,6 @@
     background-image: url('../../images/logo-icon.png');
     width: 74px;
     height: 34px;
-  }
-
-  .menu-aside.showMenu {
-    width: 100%;
   }
 }
 
@@ -794,23 +862,47 @@
     padding-top: 30px;
   }
 
-  .footer-newsletter-area form input {
-    width: 70%;
-    height: 38px;
+  .footer-newsletter .footer-final ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-newsletter-area form,
+  .footer-newsletter-area form input,
+  .footer-newsletter-area form button {
+    display: block;
+    width: 100%;
+    position: static;
+    border-radius: 5px;
+  }
+
+  .footer-newsletter-area form input,
+  .footer-newsletter-area form button {
+    height: 35px;
   }
 
   .footer-newsletter-area form button {
-    height: 38px;
+    margin-top: 10px;
   }
 
   .footer-newsletter .footer-final {
     text-align: center;
-    gap: 20px;
   }
 
-  .footer-newsletter .footer-final ul {
-    flex-direction: column;
-    gap: 5px;
+  .return-to-top {
+    width: 35px;
+    height: 35px;
+    right: 10px;
+  }
+
+  .modal-area-content h2{
+    font-size: 1.25rem;
+  }
+
+  .modal-area-content p, .modal-button{
+    font-size: 0.88rem;
   }
 }
 
@@ -889,18 +981,4 @@
   .initial-bg-content p {
     font-size: 1rem;
   }
-
-  .footer-newsletter-area form,
-  .footer-newsletter-area form input,
-  .footer-newsletter-area form button {
-    display: block;
-    width: 100%;
-    position: static;
-    border-radius: 5px;
-  }
-
-  .footer-newsletter-area form button {
-    margin-top: 10px;
-  }
-
 }

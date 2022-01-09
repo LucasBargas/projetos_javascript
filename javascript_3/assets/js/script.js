@@ -5,6 +5,7 @@ import NavAside from "./js_modules/nav_aside.js";
 import TabNavAside from "./js_modules/tabnav_aside.js";
 import MainProductsSlide from "./js_modules/main_products_slide.js";
 import HeaderFixed from "./js_modules/header_fixed.js";
+import ReturnToTop from "./js_modules/return_to_top.js";
 
 const modal = new Modal();
 modal.init();
@@ -26,3 +27,6 @@ mainProductsSlide.init();
 
 const headerFixed = new HeaderFixed();
 headerFixed.init();
+
+const returnToTop = new ReturnToTop();
+returnToTop.init();
