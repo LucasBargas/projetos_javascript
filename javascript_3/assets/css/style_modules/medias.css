@@ -655,6 +655,11 @@
     display: flex;
     justify-content: center;
   }
+
+  .blog-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -708,8 +713,9 @@
     gap: 15px;
   }
 
-  .products-showcase-content {
-    grid-template-columns: 1fr;
+  .products-showcase-content, .why-us-content,
+  .blog-content {
+    grid-template-columns: 100%;
   }
 
   .product-card .product-card-img img {
@@ -720,10 +726,6 @@
   .selllers-product {
     grid-template-columns: 100%;
     gap: 40px;
-  }
-
-  .why-us-content {
-    grid-template-columns: 100%;
   }
 }
 
