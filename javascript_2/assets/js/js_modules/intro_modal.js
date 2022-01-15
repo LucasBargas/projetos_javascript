@@ -1,20 +1,36 @@
 export default class Modal {
   constructor() {
-    this.jsModal = document.querySelector('.jsModal');
-    this.hiddenModal = () => this.jsModal.classList.toggle('active');
-
-    this.captureClickOnModal = this.captureClickOnModal.bind(this);
+    this.modal = document.querySelector('.jsModal');
+    this.classActive = 'active';
+    this.event = ['touchstart', 'click']
+    document.body.style.overflow = 'hidden';
   }
 
-  captureClickOnModal() {
-    document.addEventListener('click', (e) => {
-      const el = e.target;
-      if (el.classList.contains('jsCloseButton') || el.classList.contains('jsModalButton') || el === this.jsModal) this.hiddenModal();
-    });
+  hiddenModal() {
+    this.modal.classList.remove(this.classActive);
+    document.body.style.overflow = 'auto';
+  }
+
+  addEvent() {
+    this.event.forEach(userEvent => {
+      document.addEventListener(userEvent, e => {
+        const el = e.target;
+  
+        if (el.classList.contains(this.classActive)) {
+          this.hiddenModal();
+  
+        } else if (el.classList.contains('jsCloseButton')) {
+          this.hiddenModal();
+  
+        } else if (el.classList.contains('jsModalButton')) {
+          this.hiddenModal();
+        }
+      })
+    })
   }
 
   init() {
-    this.captureClickOnModal();
+    this.addEvent();
     return this;
   }
 }
