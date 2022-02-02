@@ -112,20 +112,28 @@
           @include base_mixins.mobile-500
             padding: 20px 0
             font-size: 1rem
-
-          &.show::after
+          
+          &::after
             content: ''
             display: block
             height: 3px
             border-radius: 3px
-            width: 100%
+            width: 0
             background: variables.$light-color
             position: absolute
             bottom: 0
             left: 0
+            transition: .4s
 
-            @include base_mixins.mobile-500
+            @include base_mixins.mobile-1100
               display: none
+          
+          &:hover::after
+            opacity: 1
+            width: 100%
+
+          &.show::after
+            width: 100%
           
           span:first-of-type
             font-weight: 700
