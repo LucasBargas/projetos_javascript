@@ -1,0 +1,29 @@
+{
+  "name": "lucas-bargas---portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.dev.config.js --watch",
+    "prod": "webpack --config webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasBargas/lucas_bargas_portfolio_refatorado.git"
+  },
+  "keywords": [],
+  "author": "Lucas Bargas <lucas.bargasoficial@gmail.com> (https://projetoslucasbargas.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucasBargas/lucas_bargas_portfolio_refatorado/issues"
+  },
+  "homepage": "https://github.com/LucasBargas/lucas_bargas_portfolio_refatorado#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
