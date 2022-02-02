@@ -1,0 +1,42 @@
+@use './_base_mixins.sass'
+@use './_variables.sass'
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+html
+  font-size: 16px
+
+  @include base_mixins.mobile-370
+    font-size: 14px
+
+@font-face
+  font-family: 'Barlow Condensed'
+  font-weight: 400
+  src: url('../../fonts/BarlowCondensed-Regular.ttf'), url('../../fonts/BarlowCondensed-Regular.woff'), url('../../fonts/BarlowCondensed-Regular.woff2')
+
+@font-face
+  font-family: 'Bellefair'
+  font-weight: 400
+  src: url('../../fonts/Bellefair-Regular.ttf'), url('../../fonts/Bellefair-Regular.woff'), url('../../fonts/Bellefair-Regular.woff2')
+
+body
+  font-family: 'Barlow Condensed'
+  font-weight: 400
+  color: variables.$light-color
+  background: variables.$bg-color
+
+  ul
+    list-style: none
+
+  a
+    text-decoration: none
+
+  button, input
+    outline: none
+    border: none
+  
+  p
+    line-height: 2rem

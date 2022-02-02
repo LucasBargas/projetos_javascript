@@ -1,0 +1,54 @@
+@mixin icons($height, $width)
+  background-position: center
+  background-size: 100% 100%
+  width: $width
+  height: $height
+
+@mixin image($height, $width)
+  background-position: center
+  background-size: cover
+  width: $width
+  height: $height
+
+@mixin button($bg, $border-color, $font-color)
+  border: 1px solid $border-color
+  background: $bg
+  color: $font-color
+
+@mixin container
+  max-width: 1280px
+  width: 100%
+  margin: 0 auto
+
+// mixin-medias
+@mixin mobile-1100
+  @media(max-width: 1100px)
+    @content
+
+@mixin mobile-800
+  @media(max-width: 840px)
+    @content
+
+@mixin mobile-500
+  @media(max-width: 500px)
+    @content
+
+@mixin mobile-420
+  @media(max-width: 420px)
+    @content
+
+@mixin mobile-390
+  @media(max-width: 390px)
+    @content
+
+@mixin mobile-370
+  @media(max-width: 370px)
+    @content
+
+@mixin mobile-350
+  @media(max-width: 350px)
+    @content
+
+@mixin mobile-300
+  @media(max-width: 300px)
+    @content
