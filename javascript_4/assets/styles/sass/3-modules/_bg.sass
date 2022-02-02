@@ -13,11 +13,17 @@
     top: 0
     left: 0
     opacity: 0
-    transition: .3s
+    transition: .4s
+
+    .bg-content
+      display: none
 
     &.show
       opacity: 1
       z-index: 1
+
+      .bg-content
+        display: flex
 
   #home
     background-image: url('https://javascript-4.projetoslucasbargas.com/assets/images/bgs/desk_home.jpg')
