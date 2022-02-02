@@ -1,0 +1,167 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+.header
+  display: flex
+  align-items: center
+  position: absolute
+  top: 42px
+  left: 0
+  width: 100%
+  z-index: 100
+
+  @include base_mixins.mobile-840
+    top: 0
+  
+  @include base_mixins.mobile-500
+    justify-content: space-between
+    padding: 30px 4%
+
+  &::after
+    content: ''
+    width: 35%
+    height: 1px
+    background: variables.$light-color
+    opacity: .4
+    position: absolute
+    left: 12%
+
+    @include base_mixins.mobile-840
+      display: none
+
+  &-brand
+    background: transparent
+    width: 45%
+    padding-left: 50px
+
+    @include base_mixins.mobile-840
+      width: 100%
+    
+    @include base_mixins.mobile-500
+      padding-left: 0
+
+    a
+      display: inline-block
+      @include base_mixins.icons(48px, 48px)
+      background-image: url('../../images/icons/logo.png')
+
+      @include base_mixins.mobile-370
+        @include base_mixins.icons(40px, 40px)
+  
+  &-nav
+    display: flex
+    justify-content: center
+    align-items: center
+    background: rgba(255, 255, 255, 0.04)
+    backdrop-filter: blur(81.5485px)
+    width: 55%
+
+    @include base_mixins.mobile-840
+      width: 100%
+    
+    @include base_mixins.mobile-500
+      display: flex
+      transform: translate3d(100%, 0, 0)
+      padding: 30px 20px
+      flex-direction: column-reverse
+      justify-content: flex-end
+      align-items: flex-end
+      position: absolute
+      top: 0
+      right: 0
+      height: 100vh
+      width: 65%
+      transition: .4s
+
+      @include base_mixins.mobile-370
+        width: 75%
+        padding: 25px 15px
+      
+      &.show
+        @include base_mixins.mobile-500
+          transform: translate3d(0, 0, 0)
+          transition: .4s
+
+    ul
+      display: flex
+
+      @include base_mixins.mobile-840
+        padding: 0 30px
+
+      @include base_mixins.mobile-500
+        display: block
+        padding: 0
+        width: 100%
+
+      li
+        margin: 0 23px
+
+        a
+          color: variables.$light-color
+          text-transform: uppercase
+          display: block
+          padding: 30px 0
+          font-size: .875rem
+          letter-spacing: 2.7px
+          position: relative
+
+          @include base_mixins.mobile-840
+            padding: 40px 0
+          
+          @include base_mixins.mobile-500
+            padding: 20px 0
+            font-size: 1rem
+
+          &.show::after
+            content: ''
+            display: block
+            height: 3px
+            border-radius: 3px
+            width: 100%
+            background: variables.$light-color
+            position: absolute
+            bottom: 0
+            left: 0
+
+            @include base_mixins.mobile-500
+              display: none
+          
+          span:first-of-type
+            font-weight: 700
+            margin-right: 7px
+
+            @include base_mixins.mobile-840
+              display: none
+            
+            @include base_mixins.mobile-500
+              display: inline-block
+              margin-right: 10px
+
+          span:last-of-type
+            opacity: .8
+
+    #btn-mobile-close
+      display: none
+      cursor: pointer
+      background: transparent
+      @include base_mixins.icons(20px, 20px)
+      background-image: url('../../images/icons/close_mobile.svg')
+
+      @include base_mixins.mobile-500
+        display: block
+        margin-bottom: 60px
+  
+  #btn-mobile-open
+    display: none
+    cursor: pointer
+    background: transparent
+    padding: 10px 0
+    
+    span
+      display: block
+      @include base_mixins.icons(21px, 24px)
+      background-image: url('../../images/icons/open_mobile.svg')
+
+    @include base_mixins.mobile-500
+      display: block

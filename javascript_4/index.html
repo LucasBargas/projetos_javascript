@@ -18,20 +18,52 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-
-  <!--font-awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-  <!--bootstrap-icons-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
 </head>
 <body>
+  <header class="header">
+    <div class="header-brand">
+      <a href="index.html"></a>
+    </div>
+
+    <nav class="header-nav jsHeaderNav">
+      <ul>
+        <li><a class="show" href="#home">
+          <span>00</span><span>Home</span>
+        </a></li>
+
+        <li><a href="#destination">
+          <span>01</span><span>Destination</span>
+        </a></li>
+
+        <li><a href="#crew">
+          <span>02</span><span>Crew</span>
+        </a></li>
+
+        <li><a href="#technology">
+          <span>03</span><span>Technology</span>
+        </a></li>
+      </ul>
+
+      <button class="jsMobileClose" id="btn-mobile-close"></button>
+    </nav>
+
+    <button class="jsMobileOpen" id="btn-mobile-open">
+      <span></span>
+    </button>
+  </header><!--header-->
+
   <main class="main-content">
-    <section class="bg show" id="home"></section>
-    <section class="bg" id="destination">Destination</section>
-    <section class="bg" id="crew">Crew</section>
-    <section class="bg" id="tech">Tech</section>
+    <section class="jsBg bg show" id="home">
+
+    </section>
+
+    <section class="jsBg jsDestination bg" id="destination"></section>
+
+    <section class="jsBg bg" id="crew"></section>
+
+    <section class="jsBg bg" id="tech"></section>
   </main><!--main-content-->
+
   <script src="assets/js/app.min.js"></script>
 </body>
 </html>
