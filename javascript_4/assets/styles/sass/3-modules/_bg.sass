@@ -6,6 +6,7 @@
   z-index: 1
 
   .bg
+    display: flex
     @extend %space
     @include base_mixins.image(100vh, 100%)
     position: absolute
@@ -16,22 +17,19 @@
 
     &.show
       opacity: 1
+      z-index: 1
 
   #home
-    z-index: 5
     background-image: url('https://javascript-4.projetoslucasbargas.com/assets/images/bgs/desk_home.jpg')
 
     @include base_mixins.mobile-780
       background-image: url('https://javascript-4.projetoslucasbargas.com/assets/images/bgs/desk_home_mobile.jpg')
-  
+    
   #destination
-    z-index: 4
     background-image: url('https://javascript-4.projetoslucasbargas.com/assets/images/bgs/desk_destination.jpg')
   
   #crew
-    z-index: 3
     background-image: url('https://javascript-4.projetoslucasbargas.com/assets/images/bgs/desk_crew.jpg')
   
   #tech
-    z-index: 2
     background-image: url('https://javascript-4.projetoslucasbargas.com/assets/images/bgs/desk_tech.jpg')

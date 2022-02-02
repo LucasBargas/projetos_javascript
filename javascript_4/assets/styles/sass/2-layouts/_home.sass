@@ -1,0 +1,79 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+@use '../1-base/_variables.sass'
+
+#home
+  .bg-content
+    width: 100%
+    display: flex
+    align-items: center
+    @include base_mixins.container
+  
+    .bg-content-left, .bg-content-right
+      width: 50%
+    
+    .bg-content-left
+      h3
+        font-family: 'Barlow Condensed'
+        font-weight: 400
+        font-size: 1.75rem
+        letter-spacing: 4.725px
+        color: variables.$light-blue
+        text-transform: uppercase
+      
+      h1
+        margin: 10px 0 15px 0
+        font-size: 8.5rem
+        text-transform: uppercase
+      
+      p
+        color: variables.$light-blue
+        font-size: 1.125rem
+        max-width: 75%
+
+    .bg-content-right
+      display: flex
+      align-items: center
+      justify-content: center
+
+      button
+        position: relative
+        cursor: pointer
+        width: 274px
+        height: 274px
+        border-radius: 50%
+        font-family: 'Bellefair'
+        text-transform: uppercase
+        font-size: 2.25rem
+        color: variables.$primary-color
+        user-select: none
+        transition: 0.4s
+
+        &:hover
+          transition: 0.1s
+        
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          border-radius: 4em
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+          opacity: 0
+          transition: all 0.5s
+          box-shadow: 0 0 10px 60px variables.$light-color
+        
+        &:active::after 
+          box-shadow: 0 0 0 0 variables.$light-color
+          position: absolute
+          border-radius: 4em
+          left: 0
+          top:0
+          opacity: 1
+          transition: 0s
+
+        &:active
+          top: 1px
+        
