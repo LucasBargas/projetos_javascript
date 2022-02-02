@@ -1,0 +1,35 @@
+@use '../1-base/_base_mixins.sass'
+@use '../1-base/_extends.sass'
+
+.main-content
+  position: relative
+  z-index: 1
+
+  .bg
+    @extend %space
+    @include base_mixins.image(100vh, 100%)
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    transition: .4s
+
+    &.show
+      opacity: 1
+      transition: .4s
+
+  #home
+    z-index: 5
+    background-image: url('../../images/bgs/desk_home.jpg')
+  
+  #destination
+    z-index: 4
+    background-image: url('../../images/bgs/desk_destination.jpg')
+  
+  #crew
+    z-index: 3
+    background-image: url('../../images/bgs/desk_crew.jpg')
+  
+  #tech
+    z-index: 2
+    background-image: url('../../images/bgs/desk_tech.jpg')
