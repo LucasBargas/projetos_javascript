@@ -4,13 +4,15 @@
 
 #home
   .bg-content
-    padding-top: 80px
     width: 100%
     align-items: center
     @include base_mixins.container
 
-    @include base_mixins.mobile-840
+    @include base_mixins.mobile-1100
       flex-direction: column
+    
+    @include base_mixins.mobile-780
+      padding-top: 80px
 
     @include base_mixins.mobile-500
       padding-top: 120px
@@ -18,13 +20,13 @@
     .bg-content-left, .bg-content-right
       width: 50%
 
-      @include base_mixins.mobile-840
+      @include base_mixins.mobile-1100
         width: 100%
         height: 100%
         text-align: center
     
     .bg-content-left
-      @include base_mixins.mobile-840
+      @include base_mixins.mobile-1100
         display: flex
         justify-content: center
         flex-direction: column

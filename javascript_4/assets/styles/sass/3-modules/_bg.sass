@@ -8,12 +8,26 @@
   .bg
     display: flex
     @extend %space
-    @include base_mixins.image(100vh, 100%)
     position: absolute
     top: 0
     left: 0
     opacity: 0
     transition: .4s
+
+    @include base_mixins.desk-1536
+      @include base_mixins.image(960px, 100%)
+
+    @include base_mixins.desk-1440
+      @include base_mixins.image(900px, 100%)
+
+    @include base_mixins.desk-1366
+      @include base_mixins.image(768px, 100%)
+
+    @include base_mixins.desk-1280
+      @include base_mixins.image(800px, 100%)
+
+    @include base_mixins.mobile-1100
+      @include base_mixins.image(100vh, 100%)
 
     .bg-content
       display: none

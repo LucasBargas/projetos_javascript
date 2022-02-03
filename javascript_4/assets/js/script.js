@@ -14,3 +14,9 @@ explore.init();
 
 const tabNavHeader = new TabNav('.jsHeaderNav li a', '.jsBg');
 tabNavHeader.init();
+
+const tabNavDest = new TabNav('.jsDestNav li', '.jsDestContent');
+tabNavDest.init();
+
+const tabDestImgs = new TabNav('.jsDestNav li', '.jsDestImgs figure');
+tabDestImgs.init();
