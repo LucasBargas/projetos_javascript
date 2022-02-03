@@ -2,6 +2,28 @@
 @use '../1-base/_extends.sass'
 @use '../1-base/_variables.sass'
 
+@keyframes show
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes showContentLeft
+  from
+    opacity: 0
+    transform: translate3d(-60px, 0, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+@keyframes showContentRight
+  from
+    opacity: 0
+    transform: translate3d(60px, 0, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
 #destination
   @include base_mixins.mobile-500
     @include base_mixins.image(auto, 100%)
@@ -23,6 +45,7 @@
       padding-top: 130px
 
     h3
+      animation: show 2s forwards
       font-family: 'Barlow Condensed'
       font-weight: 400
       font-size: 1.75rem
@@ -70,6 +93,7 @@
           padding-top: 0
       
       &-left
+        animation: showContentLeft .5s forwards
         position: relative
         width: 60%
 
@@ -103,6 +127,8 @@
               width: 50%
       
       &-right
+        animation: showContentRight .5s forwards
+
         @include base_mixins.mobile-1100
           max-width: 85%
         

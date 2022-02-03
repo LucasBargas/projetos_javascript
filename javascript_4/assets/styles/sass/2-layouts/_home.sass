@@ -2,10 +2,19 @@
 @use '../1-base/_extends.sass'
 @use '../1-base/_variables.sass'
 
+@keyframes showContent
+  from
+    opacity: 0
+    transform: scale(.9)
+  to
+    opacity: 1
+    transform: scale(1)
+
 #home
   .bg-content
     width: 100%
     align-items: center
+    animation: showContent .7s forwards
     @include base_mixins.container
 
     @include base_mixins.mobile-1100
