@@ -37,7 +37,6 @@
       padding-top: 130px
 
     h3
-      animation: show 1.5s forwards
       font-family: 'Barlow Condensed'
       font-weight: 400
       font-size: 1.75rem
@@ -92,7 +91,6 @@
         display: flex
         flex-direction: column
         justify-content: center
-        animation: topToDown .6s forwards
 
         @include base_mixins.mobile-1100
           padding-top: 0
@@ -157,7 +155,7 @@
         display: flex
 
         @include base_mixins.mobile-1100
-          padding-top: 40px
+          padding-top: 30px
           justify-content: center
         
         @include base_mixins.mobile-500
@@ -172,13 +170,16 @@
           margin-right: 20px
           transition: .4s
 
+          @include base_mixins.mobile-1100
+            margin: 0 15px
+
           &:hover
             background: variables.$light-color
 
             @include base_mixins.mobile-1100
               background: variables.$gray-color
 
-          &.active
+          &#active
             background: variables.$light-color
     
     .bg-content-area-imgs
@@ -215,7 +216,6 @@
           opacity: 1
           visibility: visible
           z-index: 4
-          animation: show 1.5s forwards
 
         img
           display: block
@@ -302,3 +302,14 @@
           
           @include base_mixins.mobile-350
             width: 100%
+    
+    &.show
+      h3
+        animation: show 1.5s forwards
+      
+      .bg-content-area-slider
+        animation: topToDown .6s forwards
+
+      .bg-content-area-imgs
+        figure.show
+          animation: show 1.7s forwards

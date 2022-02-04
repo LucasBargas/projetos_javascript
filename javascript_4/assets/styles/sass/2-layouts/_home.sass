@@ -14,7 +14,6 @@
   .bg-content
     width: 100%
     align-items: center
-    animation: showContent .7s forwards
     @include base_mixins.container
 
     @include base_mixins.mobile-1100
@@ -25,6 +24,9 @@
 
     @include base_mixins.mobile-500
       padding-top: 120px
+    
+    &.show
+      animation: showContent .7s forwards
   
     .bg-content-left, .bg-content-right
       width: 50%

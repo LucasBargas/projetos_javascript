@@ -5,14 +5,14 @@ export default class Slider {
     this.sliderArea = document.querySelector('.jsSliderArea');
     this.sliderControl = document.querySelectorAll('.jsSliderController li');
     this.onResize = debounce(this.onResize.bind(this), 200);
-    this.class = 'active';
+    this.id = 'active';
   }
 
   activeControl(index) {
     this.sliderControl.forEach(ctrl => {
-      ctrl.classList.remove(this.class);
+      ctrl.removeAttribute('id');
     })
-    this.sliderControl[index].classList.add(this.class);
+    this.sliderControl[index].setAttribute('id', this.id)
   }
 
   moveSlide(distX) {

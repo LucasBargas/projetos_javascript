@@ -4,21 +4,18 @@ export default class Explore {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  hancleClass() {
+  addClass() {
     setTimeout(() => {
       document.querySelector('#destination').classList.add(this.class);
-
       document.querySelector('#home').classList.remove(this.class);
-
       document.querySelector('.jsHeaderNav .destination').classList.add(this.class);
-
       document.querySelector('.jsHeaderNav .home').classList.remove(this.class);
     }, 300)
   }
 
   handleClick(e) {
     e.preventDefault();
-    this.hancleClass();
+    this.addClass();
   }
 
   addEvents() {

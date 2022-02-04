@@ -24,6 +24,12 @@
     opacity: 1
     transform: translate3d(0, 0, 0)
 
+@keyframes showPLanetInfo
+  from
+    transform: translate3d(0, 30px, 0)
+  to
+    transform: translate3d(0, 0, 0)
+
 #destination
   @include base_mixins.mobile-500
     @include base_mixins.image(auto, 100%)
@@ -45,7 +51,6 @@
       padding-top: 130px
 
     h3
-      animation: show 1.5s forwards
       font-family: 'Barlow Condensed'
       font-weight: 400
       font-size: 1.75rem
@@ -93,7 +98,6 @@
           padding-top: 0
       
       &-left
-        animation: showContentLeft .5s forwards
         position: relative
         width: 60%
 
@@ -127,8 +131,6 @@
               width: 50%
       
       &-right
-        animation: showContentRight .5s forwards
-
         @include base_mixins.mobile-1100
           max-width: 85%
         
@@ -175,13 +177,6 @@
 
           &.show
             display: block
-            animation: showPLanetInfo .3s forwards
-          
-          @keyframes showPLanetInfo
-            from
-              transform: translate3d(0, 20px, 0)
-            to
-              transform: translate3d(0, 0, 0)
 
           h1
             font-size: 6rem
@@ -237,3 +232,16 @@
                 font-size: 1.75rem
                 font-family: 'Bellefair'
                 margin-top: 15px
+  
+    &.show
+      h3
+        animation: show 1.5s forwards
+      
+      .bg-content-area-left
+        animation: showContentLeft .5s forwards
+
+      .bg-content-area-right
+        animation: showContentRight .5s forwards
+
+        &-content.show
+          animation: showPLanetInfo .3s forwards
