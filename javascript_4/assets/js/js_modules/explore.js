@@ -1,15 +1,22 @@
 export default class Explore {
   constructor() {
+    this.destArea = document.querySelector('#destination');
+    this.homeArea = document.querySelector('#home');
+    this.destLink = document.querySelector('.jsHeaderNav .destination');
+    this.homeLink = document.querySelector('.jsHeaderNav .home');
     this.class = 'show';
     this.handleClick = this.handleClick.bind(this);
   }
 
   addClass() {
     setTimeout(() => {
-      document.querySelector('#destination').classList.add(this.class);
-      document.querySelector('#home').classList.remove(this.class);
-      document.querySelector('.jsHeaderNav .destination').classList.add(this.class);
-      document.querySelector('.jsHeaderNav .home').classList.remove(this.class);
+      this.destArea.classList.add(this.class);
+      this.homeArea.classList.remove(this.class);
+      this.destLink.classList.add(this.class);
+      this.homeLink.classList.remove(this.class);
+
+      this.destArea.querySelector('.jsBgContent').classList.add('show');
+      this.homeArea.querySelector('.jsBgContent').classList.remove('show');
     }, 300)
   }
 
