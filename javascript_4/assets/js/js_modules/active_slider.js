@@ -33,7 +33,9 @@ export default class ActiveSlider {
   }
 
   handleClick(e) {
+    e.preventDefault();
     const el = e.target.closest('a');
+    console.log(el)
     const idByHref = el.getAttribute('href');
     const selectArea = document.querySelector(idByHref);
     this.getId(selectArea);
