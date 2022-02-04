@@ -27,6 +27,3 @@ tabNavDest.init();
 
 const tabDestImgs = new TabNav('.jsDestNav li', '.jsDestImgs figure');
 tabDestImgs.init();
-
-// const tabCrewImgs = new TabNav('.jsSliderController li', '.jsCrewImgs figure');
-// tabCrewImgs.init();
