@@ -18,5 +18,3 @@ jobs:
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
         server-dir: javascript-4.projetoslucasbargas.com/
-        exclude: |
-          assets/styles/sass/*.sass
