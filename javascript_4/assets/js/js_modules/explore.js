@@ -6,7 +6,7 @@ export default class Explore {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  addClass() {
+  toggleClass() {
     setTimeout(() => {
       this.destArea.classList.add(this.class);
       this.homeArea.classList.remove(this.class);
@@ -21,7 +21,7 @@ export default class Explore {
 
   handleClick(e) {
     e.preventDefault();
-    this.addClass();
+    this.toggleClass();
   }
 
   addEvents() {
