@@ -14,8 +14,8 @@ export default class Explore {
       document.querySelector('.jsHeaderNav .destination').classList.add(this.class);
       document.querySelector('.jsHeaderNav .home').classList.remove(this.class);
 
-      this.destArea.querySelector('.jsBgContent').classList.add('show');
-      this.homeArea.querySelector('.jsBgContent').classList.remove('show');
+      this.destArea.querySelector('.jsBgContent').classList.add(this.class);
+      this.homeArea.querySelector('.jsBgContent').classList.remove(this.class);
     }, 300)
   }
 
