@@ -1,3 +1,304 @@
 @use '../1-base/_base_mixins.sass'
 @use '../1-base/_extends.sass'
 @use '../1-base/_variables.sass' 
+
+@keyframes show
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes topToDown
+  from
+    opacity: 0
+    transform: translate3d(0, -50px, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+#crew
+  @include base_mixins.mobile-500
+    @include base_mixins.image(auto, 100%)
+
+  .bg-content
+    width: 100%
+    @include base_mixins.container
+    flex-direction: column
+    justify-content: center
+
+    @include base_mixins.desk-1366
+      padding-top: 60px
+    
+    @include base_mixins.mobile-1100
+      height: 100%
+      padding-top: 60px
+    
+    @include base_mixins.mobile-840
+      padding-top: 130px
+
+    h3
+      animation: show 1.5s forwards
+      font-family: 'Barlow Condensed'
+      font-weight: 400
+      font-size: 1.75rem
+      text-transform: uppercase
+      letter-spacing: 4.725px
+      position: relative
+
+      @include base_mixins.desk-1536
+        top: 210px
+
+      @include base_mixins.desk-1440
+        top: 190px
+      
+      @include base_mixins.desk-1366
+        top: 100px
+      
+      @include base_mixins.mobile-840
+        position: static
+
+      @include base_mixins.mobile-500
+        text-align: center
+        font-size: 1rem
+
+      span:first-of-type
+        color: variables.$gray-color
+        margin-right: 15px
+
+      span:last-of-type
+        color: variables.$light-color
+    
+    &-area
+      display: flex
+      height: 100%
+
+      @include base_mixins.mobile-1100
+        flex-direction: column
+        justify-content: center
+        height: none
+      
+      @include base_mixins.mobile-500
+        flex-direction: column-reverse
+
+      .bg-content-area-slider, .bg-content-area-imgs
+        width: 50%
+
+        @include base_mixins.mobile-1100
+          width: 100%
+          height: 100%
+      
+      .bg-content-area-slider
+        padding-top: 120px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        animation: topToDown .6s forwards
+
+        @include base_mixins.mobile-1100
+          padding-top: 0
+          text-align: center
+        
+        @include base_mixins.mobile-840
+          display: block
+          padding-top: 60px
+        
+        @include base_mixins.mobile-500
+          display: flex
+          flex-direction: column-reverse
+          padding-top: 0
+          padding: 60px 0 70px 0
+
+      .slider-wrapper
+        overflow: hidden
+
+        .slider-area
+          display: flex
+          transition: transform .4s
+          transform: translate3d(-0, 0, 0)
+
+          .slider-info
+            padding: 0 5px
+            flex-shrink: 0
+            width: 100%
+
+            &-content
+              h4, h2
+                font-family: 'Bellefair'
+                text-transform: uppercase
+
+              h4
+                font-weight: 400
+                font-size: 1.75rem
+                opacity: .7
+
+                @include base_mixins.mobile-420
+                  font-size: 1.25rem
+
+              h2
+                color: variables.$light-color
+                font-size: 3rem
+                margin: 20px 0
+
+                @include base_mixins.mobile-420
+                  font-size: 2rem
+              
+              p
+                color: variables.$light-blue
+                max-width: 65%
+
+                @include base_mixins.mobile-1100
+                  display: inline-block
+                
+                @include base_mixins.mobile-500
+                  max-width: none
+      
+      .slider-controller
+        padding-top: 80px
+        display: flex
+
+        @include base_mixins.mobile-1100
+          padding-top: 40px
+          justify-content: center
+        
+        @include base_mixins.mobile-500
+          padding: 0 0 40px 0
+
+        li
+          height: 15px
+          width: 15px
+          border-radius: 50%
+          background: variables.$gray-color
+          cursor: pointer
+          margin-right: 20px
+          transition: .4s
+
+          &:hover
+            background: variables.$light-color
+
+            @include base_mixins.mobile-1100
+              background: variables.$gray-color
+
+          &.active
+            background: variables.$light-color
+    
+    .bg-content-area-imgs
+      position: relative
+
+      @include base_mixins.mobile-500
+        padding-top: 350px
+
+      figure
+        display: flex
+        align-items: flex-end
+        height: 100%
+        position: absolute
+        top: 0
+        opacity: 0
+        visibility: hidden
+        transition: .3s
+
+        @include base_mixins.mobile-1100
+          justify-content: center
+          height: none
+          width: 100%
+        
+        &::after
+          @include base_mixins.mobile-500
+            content: ''
+            position: absolute
+            bottom: 0
+            background: rgba(255, 255, 255, .4)
+            height: 1px
+            width: 100%
+          
+        &.show
+          opacity: 1
+          visibility: visible
+          z-index: 4
+          animation: show 1.5s forwards
+
+        img
+          display: block
+          height: auto
+
+          @include base_mixins.desk-1536
+            width: 100%
+
+          @include base_mixins.desk-1366
+            width: 90%
+          
+        #commander
+          @include base_mixins.mobile-1100
+            width: 65%
+
+          @include base_mixins.mobile-780
+            width: 55%
+          
+          @include base_mixins.mobile-420
+            width: 65%
+
+          @include base_mixins.mobile-390
+            width: 72%
+
+          @include base_mixins.mobile-350
+            width: 88%
+
+        #specialist
+          @include base_mixins.mobile-1100
+            width: 55%
+
+          @include base_mixins.mobile-840
+            width: 60%
+
+          @include base_mixins.mobile-780
+            width: 45%
+          
+          @include base_mixins.mobile-420
+            width: 55%
+          
+          @include base_mixins.mobile-390
+            width: 62%
+
+          @include base_mixins.mobile-350
+            width: 76%
+
+        #pilot
+          @include base_mixins.mobile-1100
+            width: 65%
+
+          @include base_mixins.mobile-840
+            width: 70%
+
+          @include base_mixins.mobile-780
+            width: 55%
+          
+          @include base_mixins.mobile-420
+            width: 70%
+          
+          @include base_mixins.mobile-390
+            width: 75%
+
+          @include base_mixins.mobile-350
+            width: 90%
+
+        #enginner
+          @include base_mixins.desk-1366
+            width: 100%
+
+          @include base_mixins.mobile-1100
+            width: 80%
+
+          @include base_mixins.mobile-840
+            width: 85%
+
+          @include base_mixins.mobile-780
+            width: 65%
+          
+          @include base_mixins.mobile-420
+            width: 80%
+
+          @include base_mixins.mobile-390
+            width: 90%
+          
+          @include base_mixins.mobile-350
+            width: 100%
