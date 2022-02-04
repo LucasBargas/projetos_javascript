@@ -1,9 +1,22 @@
 import Slider from './slider.js';
+import TabNav from './tab_nav.js'
 
 export default class ActiveSlider {
   constructor() {
     this.btns = document.querySelectorAll('.jsHeaderNav li a');
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  initSliderCrew() {
+    const slider = new Slider();
+    slider.init();
+    slider.activeControl(0);
+  }
+
+  initTabCrewImgs() {
+    const tabCrewImgs = new TabNav('.jsSliderController li', '.jsCrewImgs figure');
+    tabCrewImgs.init();
+    tabCrewImgs.addClassOnContents(0);
   }
 
   getId(selectArea) {
@@ -12,8 +25,8 @@ export default class ActiveSlider {
 
       setTimeout(() => {
         if (area.classList.contains('show')) {
-          const slider = new Slider();
-          slider.init();
+          this.initSliderCrew();
+          this.initTabCrewImgs();
         }
       }, 500)
     }
