@@ -7,8 +7,10 @@ export default class Header {
   }
 
   outsideClick(e) {
-    if (!e.target.classList.contains('jsHeaderNav'))
-      this.headerNav.classList.remove(this.class);
+    const navDiff = !e.target.classList.contains('jsHeaderNav');
+    const mobileDiff = !e.target.classList.contains('jsMobileOpen');
+
+    if (navDiff && mobileDiff) this.headerNav.classList.remove(this.class);
   }
 
   handleClick(e) {
@@ -27,7 +29,7 @@ export default class Header {
       })
     })
 
-    window.addEventListener('click', this.outsideClick);
+    document.addEventListener('click', this.outsideClick);
   }
 
   init() {
