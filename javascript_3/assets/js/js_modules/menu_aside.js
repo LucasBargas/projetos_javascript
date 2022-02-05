@@ -7,6 +7,20 @@ export default class MenuAside {
     this.events = ['click', 'touchstart'];
 
     this.showAside = this.showAside.bind(this);
+    this.outsideClick = this.outsideClick.bind(this);
+  }
+
+  outsideClick(e) {
+    const asideDiff = !e.target.closest('aside');
+    const mobileDiff = !e.target.closest('li');
+    const aside = e.currentTarget.body.querySelector('aside');
+
+    if (aside.classList.contains('showMenu')) {
+      if (asideDiff && mobileDiff) {
+        this.asideArea.classList.remove(this.class);
+        this.removeNavDown();
+      }
+    }
   }
 
   removeNavDown() {
@@ -27,6 +41,8 @@ export default class MenuAside {
       })
       this.closeButton.addEventListener(userEvent, this.showAside);
     })
+
+    document.addEventListener('click', this.outsideClick);
   }
 
   init() {
