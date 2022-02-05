@@ -3,6 +3,12 @@ export default class Header {
     this.headerNav = document.querySelector('.jsHeaderNav');
     this.class = 'show';
     this.handleClick = this.handleClick.bind(this);
+    this.outsideClick = this.outsideClick.bind(this);
+  }
+
+  outsideClick(e) {
+    if (!e.target.classList.contains('jsHeaderNav'))
+      this.headerNav.classList.remove(this.class);
   }
 
   handleClick(e) {
@@ -20,6 +26,8 @@ export default class Header {
         link.addEventListener(userEvent, this.handleClick);
       })
     })
+
+    window.addEventListener('click', this.outsideClick);
   }
 
   init() {
