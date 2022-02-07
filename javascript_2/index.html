@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lucas Bargas - Projeto JavaScript #2</title>
-  <link rel="stylesheet" href="https://javascript-2.projetoslucasbargas.com/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!--seo-tags-->
   <meta name="description" content="Esta aplicação é uma réplica desenvolvida por Lucas Bargas, com o objetivo de praticar orientação a objetos com Classes, exercitar minha lógica e testar a biblioteca do SLick para Sliders.">
@@ -33,12 +33,12 @@
 
         <nav class="headerArea-nav-side jsHeaderAreaNavSide">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a class="active" data-link="home" href="#home">Home</a></li>
+            <li><a data-link="about" href="#about">About</a></li>
+            <li><a data-link="services" href="#services">Services</a></li>
+            <li><a data-link="portfolio" href="#portfolio">Portfolio</a></li>
+            <li><a data-link="team" href="#team">Team</a></li>
+            <li><a data-link="contact" href="#contact">Contact</a></li>
             <li><a class="btn" href="https://javascript-2.projetoslucasbargas.com/">Get Started</a></li>
           </ul>
 
@@ -81,7 +81,7 @@
       </div>
     </section><!--clients-->
   
-    <section class="about default-section" id="about">
+    <section class="about default-section activeLink" id="about">
       <div class="aboutArea container space">
         <div class="aboutArea-left jsAnimaScroll">
           <h2>Eum ipsam laborum deleniti velitena</h1>
@@ -174,7 +174,7 @@
       </div>
     </section><!--cta-->
   
-    <section class="services default-section" id="services">
+    <section class="services default-section activeLink" id="services">
       <div class="services-area container space">
   
         <div class="default-title jsAnimaScroll">
@@ -233,7 +233,7 @@
       </div><!--services-area-->
     </section><!--services-->
   
-    <section class="portfolio default-section" id="portfolio">
+    <section class="portfolio default-section activeLink" id="portfolio">
       <div class="portfolio-area container space">
   
         <div class="default-title jsAnimaScroll">
@@ -584,7 +584,7 @@
       </div><!--testimonials-area-->
     </section><!--testimonials-->
   
-    <section class="team default-section" id="team">
+    <section class="team default-section activeLink" id="team">
       <div class="team-area container space">
   
         <div class="default-title jsAnimaScroll">
@@ -766,7 +766,7 @@
       </div><!--services-area-->
     </section><!--services-->
   
-    <section class="contact default-section" id="contact">
+    <section class="contact default-section activeLink" id="contact">
       <div class="contact-area container space">
         <div class="default-title jsAnimaScroll">
           <h2>Contact</h2>
@@ -985,6 +985,6 @@
   </script>
 
   <!--modules-script-->
-  <script type="module" src="https://javascript-2.projetoslucasbargas.com/assets/js/script.js"></script>
+  <script type="module" src="assets/js/script.js"></script>
 </body>
 </html>

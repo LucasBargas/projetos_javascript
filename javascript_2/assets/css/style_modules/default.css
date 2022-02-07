@@ -144,6 +144,10 @@ body {
   font-weight: 500;
 }
 
+.headerArea-nav-side ul li a.active {
+  color: var(--green-color);
+}
+
 .headerArea-nav-side ul li:last-of-type {
   margin-left: 25px;
 }
