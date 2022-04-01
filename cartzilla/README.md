@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://javascript-3.projetoslucasbargas.com/>
+<https://cartzilla.projetoslucasbargas.com/>
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 

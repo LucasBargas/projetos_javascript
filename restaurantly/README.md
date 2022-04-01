@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://javascript-1.projetoslucasbargas.com/>
+<https://restaurantly.projetoslucasbargas.com/>
 
 ### Link para visualizar o projeto original
 [Clique aqui](https://bootstrapmade.com/demo/Restaurantly/)

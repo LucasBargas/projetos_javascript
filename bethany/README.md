@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://javascript-2.projetoslucasbargas.com/>
+<https://bethany.projetoslucasbargas.com/>
 
 ### Link para visualizar o projeto original
 [Clique aqui](https://bootstrapmade.com/demo/Bethany/)
