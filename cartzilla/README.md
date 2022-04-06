@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://cartzilla.projetoslucasbargas.com/>
+<https://cartzillacommerce.projetoslucasbargas.com/>
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 

@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://space.projetoslucasbargas.com/>
+<https://spacetravel.projetoslucasbargas.com/>
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 
