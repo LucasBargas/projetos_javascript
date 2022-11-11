@@ -88,7 +88,7 @@
     display: block;
     background-position: center;
     background-size: 100% 100%;
-    background-image: url('https://cartzillacommerce.projetoslucasbargas.com/assets/images/logo-dark.png');
+    background-image: url('https://cartzilla-projetoslucasbargas.netlify.app/assets/images/logo-dark.png');
     width: 142px;
     height: 34px;
   }
@@ -840,7 +840,7 @@
 
 @media screen and (max-width: 420px) {
   .mobileNav-brand a {
-    background-image: url('https://cartzillacommerce.projetoslucasbargas.com/assets/images/logo-icon.png');
+    background-image: url('https://cartzilla-projetoslucasbargas.netlify.app/assets/images/logo-icon.png');
     width: 74px;
     height: 34px;
   }

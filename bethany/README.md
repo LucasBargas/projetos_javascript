@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://bethany.projetoslucasbargas.com/>
+<https://bethany-projetoslucasbargas.netlify.app/>
 
 ### Link para visualizar o projeto original
 [Clique aqui](https://bootstrapmade.com/demo/Bethany/)

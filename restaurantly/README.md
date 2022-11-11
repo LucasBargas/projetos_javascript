@@ -1,5 +1,5 @@
 ## Link para visualizar a aplicação
-<https://restaurantly.projetoslucasbargas.com/>
+<https://restaurantly-projetoslucasbargas.netlify.app/>
 
 ### Link para visualizar o projeto original
 [Clique aqui](https://bootstrapmade.com/demo/Restaurantly/)
